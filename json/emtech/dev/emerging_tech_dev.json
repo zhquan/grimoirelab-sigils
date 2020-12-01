@@ -2,18 +2,196 @@
     "dashboard": {
         "id": "EmTech-Dev",
         "value": {
-            "description": "Emerging Tech Dev Panel developed by Bitergia",
-            "hits": 0,
-            "kibanaSavedObjectMeta": {
-                "searchSourceJSON": "{\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":\"Bots\",\"disabled\":false,\"index\":\"git-emergingtech\",\"key\":\"author_bot\",\"negate\":true,\"params\":{\"query\":true,\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"true\"},\"query\":{\"match\":{\"author_bot\":{\"query\":true,\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":\"Empty Commits\",\"disabled\":false,\"index\":\"git-emergingtech\",\"key\":\"files\",\"negate\":true,\"params\":{\"query\":\"0\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"0\"},\"query\":{\"match\":{\"files\":{\"query\":\"0\",\"type\":\"phrase\"}}}}],\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\"}}},\"highlightAll\":true,\"version\":true}"
+            "dashboard": {
+                "description": "Emerging Tech Dev Panel developed by Bitergia",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\",\"time_zone\":\"Europe/Madrid\"}}},\"highlightAll\":true,\"version\":true,\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":\"Bots\",\"disabled\":false,\"key\":\"author_bot\",\"negate\":true,\"params\":{\"query\":true},\"type\":\"phrase\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"author_bot\":{\"query\":true,\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":\"Empty Commits\",\"disabled\":false,\"key\":\"files\",\"negate\":true,\"params\":{\"query\":\"0\"},\"type\":\"phrase\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index\"},\"query\":{\"match\":{\"files\":{\"query\":\"0\",\"type\":\"phrase\"}}}}]}"
+                },
+                "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true}",
+                "panelsJSON": "[{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":6,\"i\":\"1\"},\"panelIndex\":\"1\",\"embeddableConfig\":{\"title\":\"-\"},\"title\":\"-\",\"panelRefName\":\"panel_0\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":46,\"w\":24,\"h\":6,\"i\":\"2\"},\"panelIndex\":\"2\",\"embeddableConfig\":{\"title\":\"Git Authors\"},\"title\":\"Git Authors\",\"panelRefName\":\"panel_1\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":24,\"y\":46,\"w\":24,\"h\":12,\"i\":\"3\"},\"panelIndex\":\"3\",\"embeddableConfig\":{\"title\":\"Git Authors\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"title\":\"Git Authors\",\"panelRefName\":\"panel_2\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":12,\"y\":52,\"w\":12,\"h\":6,\"i\":\"4\"},\"panelIndex\":\"4\",\"embeddableConfig\":{\"title\":\"Commits\"},\"title\":\"Commits\",\"panelRefName\":\"panel_3\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":52,\"w\":12,\"h\":6,\"i\":\"5\"},\"panelIndex\":\"5\",\"embeddableConfig\":{\"title\":\"Commits by Time Zone\"},\"title\":\"Commits by Time Zone\",\"panelRefName\":\"panel_4\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":36,\"y\":6,\"w\":12,\"h\":18,\"i\":\"6\"},\"panelIndex\":\"6\",\"embeddableConfig\":{\"title\":\"Git Domains\"},\"title\":\"Git Domains\",\"panelRefName\":\"panel_5\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":64,\"w\":24,\"h\":6,\"i\":\"7\"},\"panelIndex\":\"7\",\"embeddableConfig\":{\"title\":\"GitHub Issues Submitters & Assignees (Workload)\"},\"title\":\"GitHub Issues Submitters & Assignees (Workload)\",\"panelRefName\":\"panel_6\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":36,\"y\":64,\"w\":12,\"h\":12,\"i\":\"8\"},\"panelIndex\":\"8\",\"embeddableConfig\":{\"title\":\"Issues Labels\"},\"title\":\"Issues Labels\",\"panelRefName\":\"panel_7\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":70,\"w\":24,\"h\":6,\"i\":\"9\"},\"panelIndex\":\"9\",\"embeddableConfig\":{\"title\":\"GitHub Issues Status\"},\"title\":\"GitHub Issues Status\",\"panelRefName\":\"panel_8\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":24,\"y\":64,\"w\":12,\"h\":12,\"i\":\"10\"},\"panelIndex\":\"10\",\"embeddableConfig\":{\"title\":\"Issues Submitters\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"title\":\"Issues Submitters\",\"panelRefName\":\"panel_9\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":12,\"w\":20,\"h\":6,\"i\":\"11\"},\"panelIndex\":\"11\",\"embeddableConfig\":{\"title\":\"GitHub Issues Summary\"},\"title\":\"GitHub Issues Summary\",\"panelRefName\":\"panel_10\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":18,\"w\":20,\"h\":6,\"i\":\"12\"},\"panelIndex\":\"12\",\"embeddableConfig\":{\"title\":\"GitHub PRs Summary\"},\"title\":\"GitHub PRs Summary\",\"panelRefName\":\"panel_11\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":82,\"w\":24,\"h\":6,\"i\":\"13\"},\"panelIndex\":\"13\",\"embeddableConfig\":{\"title\":\"GitHub PRs Submitters & Assigness (Workload)\"},\"title\":\"GitHub PRs Submitters & Assigness (Workload)\",\"panelRefName\":\"panel_12\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":36,\"y\":82,\"w\":12,\"h\":12,\"i\":\"14\"},\"panelIndex\":\"14\",\"embeddableConfig\":{\"title\":\"PR Labels\"},\"title\":\"PR Labels\",\"panelRefName\":\"panel_13\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":88,\"w\":24,\"h\":6,\"i\":\"15\"},\"panelIndex\":\"15\",\"embeddableConfig\":{\"title\":\"GitHub Pull Request Status\"},\"title\":\"GitHub Pull Request Status\",\"panelRefName\":\"panel_14\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":24,\"y\":82,\"w\":12,\"h\":12,\"i\":\"16\"},\"panelIndex\":\"16\",\"embeddableConfig\":{\"title\":\"GitHub PR Submitters\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"title\":\"GitHub PR Submitters\",\"panelRefName\":\"panel_15\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":6,\"w\":20,\"h\":6,\"i\":\"17\"},\"panelIndex\":\"17\",\"embeddableConfig\":{\"title\":\"Git Summary\"},\"title\":\"Git Summary\",\"panelRefName\":\"panel_16\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":24,\"w\":24,\"h\":16,\"i\":\"18\"},\"panelIndex\":\"18\",\"embeddableConfig\":{\"title\":\"Git New Contributors\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"title\":\"Git New Contributors\",\"panelRefName\":\"panel_17\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":20,\"y\":12,\"w\":16,\"h\":12,\"i\":\"19\"},\"panelIndex\":\"19\",\"embeddableConfig\":{\"title\":\"Organizations\"},\"title\":\"Organizations\",\"panelRefName\":\"panel_18\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":20,\"y\":6,\"w\":16,\"h\":6,\"i\":\"20\"},\"panelIndex\":\"20\",\"embeddableConfig\":{\"title\":\"Projects\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"title\":\"Projects\",\"panelRefName\":\"panel_19\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":24,\"y\":24,\"w\":24,\"h\":16,\"i\":\"21\"},\"panelIndex\":\"21\",\"embeddableConfig\":{\"title\":\"Git Repositories\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"title\":\"Git Repositories\",\"panelRefName\":\"panel_20\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":40,\"w\":48,\"h\":6,\"i\":\"22\"},\"panelIndex\":\"22\",\"embeddableConfig\":{\"title\":\"-\"},\"title\":\"-\",\"panelRefName\":\"panel_21\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":58,\"w\":48,\"h\":6,\"i\":\"23\"},\"panelIndex\":\"23\",\"embeddableConfig\":{\"title\":\"-\"},\"title\":\"-\",\"panelRefName\":\"panel_22\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":76,\"w\":48,\"h\":6,\"i\":\"24\"},\"panelIndex\":\"24\",\"embeddableConfig\":{\"title\":\"-\"},\"title\":\"-\",\"panelRefName\":\"panel_23\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":94,\"w\":48,\"h\":6,\"i\":\"25\"},\"panelIndex\":\"25\",\"embeddableConfig\":{\"title\":\"-\"},\"title\":\"-\",\"panelRefName\":\"panel_24\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":119,\"w\":24,\"h\":19,\"i\":\"26\"},\"panelIndex\":\"26\",\"embeddableConfig\":{\"title\":\"The Most Active Developers\"},\"title\":\"The Most Active Developers\",\"panelRefName\":\"panel_25\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":24,\"y\":100,\"w\":24,\"h\":19,\"i\":\"27\"},\"panelIndex\":\"27\",\"embeddableConfig\":{\"title\":\"Git Domains\"},\"title\":\"Git Domains\",\"panelRefName\":\"panel_26\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":100,\"w\":24,\"h\":19,\"i\":\"28\"},\"panelIndex\":\"28\",\"embeddableConfig\":{\"title\":\"The Most Modified FIles\"},\"title\":\"The Most Modified FIles\",\"panelRefName\":\"panel_27\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":138,\"w\":12,\"h\":7,\"i\":\"29\"},\"panelIndex\":\"29\",\"embeddableConfig\":{\"title\":\"Organizations\"},\"title\":\"Organizations\",\"panelRefName\":\"panel_28\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":12,\"y\":138,\"w\":12,\"h\":7,\"i\":\"30\"},\"panelIndex\":\"30\",\"embeddableConfig\":{\"title\":\"Projects\"},\"title\":\"Projects\",\"panelRefName\":\"panel_29\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":24,\"y\":138,\"w\":12,\"h\":7,\"i\":\"31\"},\"panelIndex\":\"31\",\"embeddableConfig\":{\"title\":\"File Extensions\"},\"title\":\"File Extensions\",\"panelRefName\":\"panel_30\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":36,\"y\":138,\"w\":12,\"h\":7,\"i\":\"32\"},\"panelIndex\":\"32\",\"embeddableConfig\":{\"title\":\"File Types\"},\"title\":\"File Types\",\"panelRefName\":\"panel_31\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":24,\"y\":119,\"w\":24,\"h\":19,\"i\":\"33\"},\"panelIndex\":\"33\",\"embeddableConfig\":{\"title\":\"Filepath Path Elements\"},\"title\":\"Filepath Path Elements\",\"panelRefName\":\"panel_32\"}]",
+                "timeRestore": false,
+                "title": "Emerging Tech Dev",
+                "version": 1
             },
-            "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true}",
-            "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":2,\"i\":\"1\"},\"id\":\"summary_title\",\"title\":\"-\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":15,\"w\":6,\"h\":2,\"i\":\"2\"},\"id\":\"git_emergingtech_authors\",\"title\":\"Git Authors\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":6,\"y\":15,\"w\":6,\"h\":4,\"i\":\"3\"},\"id\":\"git_emergingtech_authors_table\",\"title\":\"Git Authors\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":3,\"y\":17,\"w\":3,\"h\":2,\"i\":\"4\"},\"id\":\"git_emergingtech_commits\",\"title\":\"Commits\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":17,\"w\":3,\"h\":2,\"i\":\"5\"},\"id\":\"git_emergingtech_commits_tz\",\"title\":\"Commits by Time Zone\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":9,\"y\":2,\"w\":3,\"h\":6,\"i\":\"6\"},\"id\":\"git_emergingtech_domains\",\"title\":\"Git Domains\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":0,\"y\":21,\"w\":6,\"h\":2,\"i\":\"7\"},\"id\":\"github_emergingtech_issues_authors_assignees\",\"title\":\"GitHub Issues Submitters & Assignees (Workload)\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":9,\"y\":21,\"w\":3,\"h\":4,\"i\":\"8\"},\"id\":\"github_emergingtech_issues_labels\",\"title\":\"Issues Labels\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":0,\"y\":23,\"w\":6,\"h\":2,\"i\":\"9\"},\"id\":\"github_emergingtech_issues_status\",\"title\":\"GitHub Issues Status\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":6,\"y\":21,\"w\":3,\"h\":4,\"i\":\"10\"},\"id\":\"github_emergingtech_issues_submitters\",\"title\":\"Issues Submitters\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":0,\"y\":4,\"w\":5,\"h\":2,\"i\":\"11\"},\"id\":\"github_emergingtech_main_numbers_issues\",\"title\":\"GitHub Issues Summary\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"12\",\"gridData\":{\"x\":0,\"y\":6,\"w\":5,\"h\":2,\"i\":\"12\"},\"id\":\"github_emergingtech_main_numbers_pullrequests\",\"title\":\"GitHub PRs Summary\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":0,\"y\":27,\"w\":6,\"h\":2,\"i\":\"13\"},\"id\":\"github_emergingtech_pullrequests_authors_assignees\",\"title\":\"GitHub PRs Submitters & Assigness (Workload)\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":9,\"y\":27,\"w\":3,\"h\":4,\"i\":\"14\"},\"id\":\"github_emergingtech_pullrequests_labels\",\"title\":\"PR Labels\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"15\",\"gridData\":{\"x\":0,\"y\":29,\"w\":6,\"h\":2,\"i\":\"15\"},\"id\":\"github_emergingtech_pullrequests_status\",\"title\":\"GitHub Pull Request Status\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"16\",\"gridData\":{\"x\":6,\"y\":27,\"w\":3,\"h\":4,\"i\":\"16\"},\"id\":\"github_emergingtech_pullrequests_submitters\",\"title\":\"GitHub PR Submitters\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"17\",\"gridData\":{\"x\":0,\"y\":2,\"w\":5,\"h\":2,\"i\":\"17\"},\"id\":\"git_emergingtech_main_numbers\",\"title\":\"Git Summary\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"18\",\"gridData\":{\"x\":0,\"y\":8,\"w\":6,\"h\":5,\"i\":\"18\"},\"id\":\"git_emergingtech_new_contributors\",\"title\":\"Git New Contributors\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"19\",\"gridData\":{\"x\":5,\"y\":4,\"w\":4,\"h\":4,\"i\":\"19\"},\"id\":\"git_emergingtech_organizations\",\"title\":\"Organizations\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"20\",\"gridData\":{\"x\":5,\"y\":2,\"w\":4,\"h\":2,\"i\":\"20\"},\"id\":\"git_emergingtech_projects\",\"title\":\"Projects\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"21\",\"gridData\":{\"x\":6,\"y\":8,\"w\":6,\"h\":5,\"i\":\"21\"},\"id\":\"git_emergingtech_repositories\",\"title\":\"Git Repositories\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"22\",\"gridData\":{\"x\":0,\"y\":13,\"w\":12,\"h\":2,\"i\":\"22\"},\"id\":\"git_title\",\"title\":\"-\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"23\",\"gridData\":{\"x\":0,\"y\":19,\"w\":12,\"h\":2,\"i\":\"23\"},\"id\":\"github_issues_title\",\"title\":\"-\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"24\",\"gridData\":{\"x\":0,\"y\":25,\"w\":12,\"h\":2,\"i\":\"24\"},\"id\":\"github_prs_title\",\"title\":\"-\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"25\",\"gridData\":{\"x\":0,\"y\":31,\"w\":12,\"h\":2,\"i\":\"25\"},\"id\":\"git_code_areas_title\",\"title\":\"-\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"26\",\"gridData\":{\"x\":0,\"y\":39,\"w\":6,\"h\":6,\"i\":\"26\"},\"id\":\"git_areas_code_emergingtech_authors\",\"title\":\"The Most Active Developers\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"27\",\"gridData\":{\"x\":6,\"y\":33,\"w\":6,\"h\":6,\"i\":\"27\"},\"id\":\"git_areas_code_emergingtech_domains\",\"title\":\"Git Domains\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"28\",\"gridData\":{\"x\":0,\"y\":33,\"w\":6,\"h\":6,\"i\":\"28\"},\"id\":\"git_areas_code_emergingtech_files\",\"title\":\"The Most Modified FIles\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"29\",\"gridData\":{\"x\":0,\"y\":45,\"w\":3,\"h\":2,\"i\":\"29\"},\"id\":\"git_areas_code_emergingtech_organizations\",\"title\":\"Organizations\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"30\",\"gridData\":{\"x\":3,\"y\":45,\"w\":3,\"h\":2,\"i\":\"30\"},\"id\":\"git_areas_code_emergingtech_projects\",\"title\":\"Projects\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"31\",\"gridData\":{\"x\":6,\"y\":45,\"w\":3,\"h\":2,\"i\":\"31\"},\"id\":\"git_areas_of_code_file_exts\",\"title\":\"File Extensions\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"32\",\"gridData\":{\"x\":9,\"y\":45,\"w\":3,\"h\":2,\"i\":\"32\"},\"id\":\"git_areas_of_code_file_types\",\"title\":\"File Types\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"},{\"panelIndex\":\"33\",\"gridData\":{\"x\":6,\"y\":39,\"w\":6,\"h\":6,\"i\":\"33\"},\"id\":\"git_areas_of_code_path_elements\",\"title\":\"Filepath Path Elements\",\"type\":\"visualization\",\"version\":\"6.1.0-1\"}]",
-            "release_date": "2018-09-20T15:06:10.720906",
-            "timeRestore": false,
-            "title": "Emerging Tech Dev",
-            "uiStateJSON": "{\"P-1\":{\"title\":\"-\"},\"P-10\":{\"title\":\"Issues Submitters\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null},\"config\":{\"searchKeyword\":\"\"}}}},\"P-11\":{\"title\":\"GitHub Issues Summary\"},\"P-12\":{\"title\":\"GitHub PRs Summary\"},\"P-13\":{\"title\":\"GitHub PRs Submitters & Assigness (Workload)\"},\"P-14\":{\"title\":\"PR Labels\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null},\"config\":{\"searchKeyword\":\"\"}}}},\"P-15\":{\"title\":\"GitHub Pull Request Status\"},\"P-16\":{\"title\":\"GitHub PR Submitters\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null},\"config\":{\"searchKeyword\":\"\"}}}},\"P-17\":{\"title\":\"Git Summary\"},\"P-18\":{\"title\":\"Git New Contributors\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null},\"config\":{\"searchKeyword\":\"\"}}}},\"P-19\":{\"title\":\"Organizations\"},\"P-2\":{\"title\":\"Git Authors\",\"vis\":{\"legendOpen\":false}},\"P-20\":{\"title\":\"Projects\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null},\"config\":{\"searchKeyword\":\"\"}}}},\"P-21\":{\"title\":\"Git Repositories\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null},\"config\":{\"searchKeyword\":\"\"}}}},\"P-22\":{\"title\":\"-\"},\"P-23\":{\"title\":\"-\"},\"P-24\":{\"title\":\"-\"},\"P-25\":{\"title\":\"-\"},\"P-26\":{\"title\":\"The Most Active Developers\",\"vis\":{\"params\":{\"config\":{\"searchKeyword\":\"\"},\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-27\":{\"title\":\"Git Domains\",\"vis\":{\"params\":{\"config\":{\"searchKeyword\":\"\"},\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-28\":{\"title\":\"The Most Modified FIles\",\"vis\":{\"params\":{\"config\":{\"searchKeyword\":\"\"},\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-29\":{\"title\":\"Organizations\"},\"P-3\":{\"title\":\"Git Authors\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null},\"config\":{\"searchKeyword\":\"\"}}}},\"P-30\":{\"title\":\"Projects\"},\"P-31\":{\"title\":\"File Extensions\"},\"P-32\":{\"title\":\"File Types\"},\"P-33\":{\"title\":\"Filepath Path Elements\"},\"P-4\":{\"title\":\"Commits\",\"vis\":{\"legendOpen\":false}},\"P-5\":{\"title\":\"Commits by Time Zone\",\"vis\":{\"legendOpen\":false}},\"P-6\":{\"title\":\"Git Domains\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null},\"config\":{\"searchKeyword\":\"\"}}}},\"P-7\":{\"title\":\"GitHub Issues Submitters & Assignees (Workload)\"},\"P-8\":{\"title\":\"Issues Labels\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null},\"config\":{\"searchKeyword\":\"\"}}}},\"P-9\":{\"title\":\"GitHub Issues Status\"}}",
-            "version": 1
+            "references": [
+                {
+                    "id": "git-emergingtech",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "git-emergingtech",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "summary_title",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_emergingtech_authors",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_emergingtech_authors_table",
+                    "name": "panel_2",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_emergingtech_commits",
+                    "name": "panel_3",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_emergingtech_commits_tz",
+                    "name": "panel_4",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_emergingtech_domains",
+                    "name": "panel_5",
+                    "type": "visualization"
+                },
+                {
+                    "id": "github_emergingtech_issues_authors_assignees",
+                    "name": "panel_6",
+                    "type": "visualization"
+                },
+                {
+                    "id": "github_emergingtech_issues_labels",
+                    "name": "panel_7",
+                    "type": "visualization"
+                },
+                {
+                    "id": "github_emergingtech_issues_status",
+                    "name": "panel_8",
+                    "type": "visualization"
+                },
+                {
+                    "id": "github_emergingtech_issues_submitters",
+                    "name": "panel_9",
+                    "type": "visualization"
+                },
+                {
+                    "id": "github_emergingtech_main_numbers_issues",
+                    "name": "panel_10",
+                    "type": "visualization"
+                },
+                {
+                    "id": "github_emergingtech_main_numbers_pullrequests",
+                    "name": "panel_11",
+                    "type": "visualization"
+                },
+                {
+                    "id": "github_emergingtech_pullrequests_authors_assignees",
+                    "name": "panel_12",
+                    "type": "visualization"
+                },
+                {
+                    "id": "github_emergingtech_pullrequests_labels",
+                    "name": "panel_13",
+                    "type": "visualization"
+                },
+                {
+                    "id": "github_emergingtech_pullrequests_status",
+                    "name": "panel_14",
+                    "type": "visualization"
+                },
+                {
+                    "id": "github_emergingtech_pullrequests_submitters",
+                    "name": "panel_15",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_emergingtech_main_numbers",
+                    "name": "panel_16",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_emergingtech_new_contributors",
+                    "name": "panel_17",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_emergingtech_organizations",
+                    "name": "panel_18",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_emergingtech_projects",
+                    "name": "panel_19",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_emergingtech_repositories",
+                    "name": "panel_20",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_title",
+                    "name": "panel_21",
+                    "type": "visualization"
+                },
+                {
+                    "id": "github_issues_title",
+                    "name": "panel_22",
+                    "type": "visualization"
+                },
+                {
+                    "id": "github_prs_title",
+                    "name": "panel_23",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_code_areas_title",
+                    "name": "panel_24",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_areas_code_emergingtech_authors",
+                    "name": "panel_25",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_areas_code_emergingtech_domains",
+                    "name": "panel_26",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_areas_code_emergingtech_files",
+                    "name": "panel_27",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_areas_code_emergingtech_organizations",
+                    "name": "panel_28",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_areas_code_emergingtech_projects",
+                    "name": "panel_29",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_areas_of_code_file_exts",
+                    "name": "panel_30",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_areas_of_code_file_types",
+                    "name": "panel_31",
+                    "type": "visualization"
+                },
+                {
+                    "id": "git_areas_of_code_path_elements",
+                    "name": "panel_32",
+                    "type": "visualization"
+                }
+            ],
+            "release_date": "2020-12-01T18:01:20.766098"
         }
     },
     "searches": [],
@@ -21,430 +199,697 @@
         {
             "id": "summary_title",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
-                },
-                "title": "summary_title",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"summary_title\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### Summary\"},\"aggs\":[],\"listeners\":{}}"
+                "references": [],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+                    },
+                    "title": "summary_title",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"summary_title\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### Summary\"},\"aggs\":[],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_emergingtech_authors",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git-emergingtech\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_emergingtech_authors",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"git_emergingtech_commits\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"# Authors\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_emergingtech_authors",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_emergingtech_commits\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"# Authors\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_emergingtech_authors_table",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git-emergingtech\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_emergingtech_authors_table",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"git_emergingtech_repositories\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"hash\",\"customLabel\":\"# Commits\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":5000,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Author\"}},{\"id\":\"3\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"lines_added\",\"customLabel\":\"Added Lines\"}},{\"id\":\"4\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"lines_removed\",\"customLabel\":\"Removed Lines\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_emergingtech_authors_table",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_emergingtech_repositories\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"hash\",\"customLabel\":\"# Commits\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":5000,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Author\"}},{\"id\":\"3\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"lines_added\",\"customLabel\":\"Added Lines\"}},{\"id\":\"4\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"lines_removed\",\"customLabel\":\"Removed Lines\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_emergingtech_commits",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git-emergingtech\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_emergingtech_commits",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"New Visualization\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"hash\",\"customLabel\":\"# Commits\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_emergingtech_commits",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"New Visualization\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"hash\",\"customLabel\":\"# Commits\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_emergingtech_commits_tz",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git-emergingtech\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_emergingtech_commits_tz",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"git_emergingtech_commits_tz\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Commits\"}},{\"id\":\"2\",\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"tz\",\"interval\":1,\"min_doc_count\":true,\"extended_bounds\":{},\"customLabel\":\"Time Zone (UTC -/+)\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_emergingtech_commits_tz",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_emergingtech_commits_tz\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Commits\"}},{\"id\":\"2\",\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"tz\",\"interval\":1,\"min_doc_count\":true,\"extended_bounds\":{},\"customLabel\":\"Time Zone (UTC -/+)\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_emergingtech_domains",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git-emergingtech\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
-                },
-                "title": "git_emergingtech_domains",
-                "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-                "version": 1,
-                "visState": "{\"title\":\"git_emergingtech_domains\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"hash\",\"customLabel\":\"# Commits\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"git_author_domain\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Domain\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_emergingtech_domains",
+                    "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_emergingtech_domains\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"hash\",\"customLabel\":\"# Commits\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"git_author_domain\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Domain\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "github_emergingtech_issues_authors_assignees",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"github-emergingtech\",\"query\":{\"query_string\":{\"query\":\"pull_request:false\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "github_emergingtech_issues_authors_assignees",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"github_emergingtech_issues_authors_assignees\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"json\":\"{\\\"precision_threshold\\\": 10000}\",\"customLabel\":\"# Issue Submitters\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"assignee_name\",\"json\":\"{\\\"precision_threshold\\\": 10000}\",\"customLabel\":\"# Assignees\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "github-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"pull_request:false\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "github_emergingtech_issues_authors_assignees",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"github_emergingtech_issues_authors_assignees\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"json\":\"{\\\"precision_threshold\\\": 10000}\",\"customLabel\":\"# Issue Submitters\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"assignee_name\",\"json\":\"{\\\"precision_threshold\\\": 10000}\",\"customLabel\":\"# Assignees\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "github_emergingtech_issues_labels",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"github-emergingtech\",\"query\":{\"query_string\":{\"query\":\"pull_request:false\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "github_emergingtech_issues_labels",
-                "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-                "version": 1,
-                "visState": "{\"title\":\"github_emergingtech_issues_labels\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"painless_labels\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Labels\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "github-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"pull_request:false\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "github_emergingtech_issues_labels",
+                    "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"github_emergingtech_issues_labels\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"painless_labels\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Labels\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "github_emergingtech_issues_status",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"github-emergingtech\",\"query\":{\"query_string\":{\"query\":\"pull_request:false\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "github_emergingtech_issues_status",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"github_emergingtech_pullrequests_status\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"state\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "github-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"pull_request:false\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "github_emergingtech_issues_status",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"github_emergingtech_pullrequests_status\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"state\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "github_emergingtech_issues_submitters",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"github-emergingtech\",\"query\":{\"query_string\":{\"query\":\"pull_request:false\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "github_emergingtech_issues_submitters",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"github_emergingtech_pullrequests_submitters\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Pull Request\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Submitter\"}},{\"id\":\"3\",\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"percents\":[50],\"customLabel\":\"Time to close (days)\"}},{\"id\":\"4\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"assignee_name\",\"customLabel\":\"# Assignees\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "github-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"pull_request:false\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "github_emergingtech_issues_submitters",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"github_emergingtech_pullrequests_submitters\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Pull Request\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Submitter\"}},{\"id\":\"3\",\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"percents\":[50],\"customLabel\":\"Time to close (days)\"}},{\"id\":\"4\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"assignee_name\",\"customLabel\":\"# Assignees\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "github_emergingtech_main_numbers_issues",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"github-emergingtech\",\"query\":{\"query_string\":{\"query\":\"pull_request:false\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "github_emergingtech_main_numbers_issues",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\": \"github_emergingtech_main_numbers_pullrequests\", \"type\": \"metric\", \"params\": {\"fontSize\": \"12\", \"metric\": {\"percentageMode\": false, \"useRanges\": false, \"colorSchema\": \"Green to Red\", \"metricColorMode\": \"None\", \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"labels\": {\"show\": true}, \"invertColors\": false, \"style\": {\"bgFill\": \"#000\", \"bgColor\": false, \"labelColor\": false, \"subText\": \"\", \"fontSize\": \"12\"}}}, \"aggs\": [{\"id\": \"1\", \"type\": \"cardinality\", \"schema\": \"metric\", \"params\": {\"field\": \"id\", \"json\": \"\", \"customLabel\": \"# Issues\"}}, {\"id\": \"2\", \"type\": \"cardinality\", \"schema\": \"metric\", \"params\": {\"field\": \"author_uuid\", \"customLabel\": \"# Submitters\"}}, {\"id\": \"3\", \"type\": \"cardinality\", \"schema\": \"metric\", \"params\": {\"field\": \"repository\", \"customLabel\": \"# Repositories\"}}, {\"id\": \"4\", \"type\": \"median\", \"schema\": \"metric\", \"params\": {\"field\": \"time_to_close_days\", \"percents\": [50], \"customLabel\": \"Median Time to Close in Days\"}}], \"listeners\": {}}"
+                "references": [
+                    {
+                        "id": "github-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"pull_request:false\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "github_emergingtech_main_numbers_issues",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"github_emergingtech_main_numbers_pullrequests\",\"type\":\"metric\",\"params\":{\"fontSize\":\"12\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":\"12\"}}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"id\",\"json\":\"\",\"customLabel\":\"# Issues\"}},{\"id\":\"2\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"# Submitters\"}},{\"id\":\"3\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"repository\",\"customLabel\":\"# Repositories\"}},{\"id\":\"4\",\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"percents\":[50],\"customLabel\":\"Median Time to Close in Days\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "github_emergingtech_main_numbers_pullrequests",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"github-emergingtech\",\"query\":{\"query_string\":{\"query\":\"pull_request:true\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "github_emergingtech_main_numbers_pullrequests",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\": \"New Visualization\", \"type\": \"metric\", \"params\": {\"fontSize\": \"12\", \"metric\": {\"percentageMode\": false, \"useRanges\": false, \"colorSchema\": \"Green to Red\", \"metricColorMode\": \"None\", \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"labels\": {\"show\": true}, \"invertColors\": false, \"style\": {\"bgFill\": \"#000\", \"bgColor\": false, \"labelColor\": false, \"subText\": \"\", \"fontSize\": \"12\"}}}, \"aggs\": [{\"id\": \"1\", \"type\": \"cardinality\", \"schema\": \"metric\", \"params\": {\"field\": \"id\", \"json\": \"\", \"customLabel\": \"# Pull Requests\"}}, {\"id\": \"2\", \"type\": \"cardinality\", \"schema\": \"metric\", \"params\": {\"field\": \"author_uuid\", \"customLabel\": \"# Submitters\"}}, {\"id\": \"3\", \"type\": \"cardinality\", \"schema\": \"metric\", \"params\": {\"field\": \"repository\", \"customLabel\": \"# Repositories\"}}, {\"id\": \"4\", \"type\": \"median\", \"schema\": \"metric\", \"params\": {\"field\": \"time_to_close_days\", \"percents\": [50], \"customLabel\": \"Median Time to Close in Days\"}}], \"listeners\": {}}"
+                "references": [
+                    {
+                        "id": "github-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"pull_request:true\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "github_emergingtech_main_numbers_pullrequests",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"New Visualization\",\"type\":\"metric\",\"params\":{\"fontSize\":\"12\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":\"12\"}}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"id\",\"json\":\"\",\"customLabel\":\"# Pull Requests\"}},{\"id\":\"2\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"# Submitters\"}},{\"id\":\"3\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"repository\",\"customLabel\":\"# Repositories\"}},{\"id\":\"4\",\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"percents\":[50],\"customLabel\":\"Median Time to Close in Days\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "github_emergingtech_pullrequests_authors_assignees",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"github-emergingtech\",\"query\":{\"query_string\":{\"query\":\"pull_request:true\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "github_emergingtech_pullrequests_authors_assignees",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"New Visualization\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"json\":\"{\\\"precision_threshold\\\": 10000}\",\"customLabel\":\"# PR Submitters\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"assignee_name\",\"json\":\"{\\\"precision_threshold\\\": 10000}\",\"customLabel\":\"# Assignees\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "github-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"pull_request:true\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "github_emergingtech_pullrequests_authors_assignees",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"New Visualization\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"json\":\"{\\\"precision_threshold\\\": 10000}\",\"customLabel\":\"# PR Submitters\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"assignee_name\",\"json\":\"{\\\"precision_threshold\\\": 10000}\",\"customLabel\":\"# Assignees\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "github_emergingtech_pullrequests_labels",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"github-emergingtech\",\"query\":{\"query_string\":{\"query\":\"pull_request:true\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "github_emergingtech_pullrequests_labels",
-                "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-                "version": 1,
-                "visState": "{\"title\":\"github_emergingtech_pullrequests_labels\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"painless_labels\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Labels\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "github-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"pull_request:true\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "github_emergingtech_pullrequests_labels",
+                    "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"github_emergingtech_pullrequests_labels\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"painless_labels\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Labels\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "github_emergingtech_pullrequests_status",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"github-emergingtech\",\"query\":{\"query_string\":{\"query\":\"pull_request:true\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "github_emergingtech_pullrequests_status",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"New Visualization\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"state\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "github-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"pull_request:true\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "github_emergingtech_pullrequests_status",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"New Visualization\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"state\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "github_emergingtech_pullrequests_submitters",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"github-emergingtech\",\"query\":{\"query_string\":{\"query\":\"pull_request:true\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "github_emergingtech_pullrequests_submitters",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"New Visualization\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Pull Request\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Submitter\"}},{\"id\":\"3\",\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"percents\":[50],\"customLabel\":\"Time to close (days)\"}},{\"id\":\"4\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"assignee_name\",\"customLabel\":\"# Assignees\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "github-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"pull_request:true\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "github_emergingtech_pullrequests_submitters",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"New Visualization\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Pull Request\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Submitter\"}},{\"id\":\"3\",\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"percents\":[50],\"customLabel\":\"Time to close (days)\"}},{\"id\":\"4\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"assignee_name\",\"customLabel\":\"# Assignees\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_emergingtech_main_numbers",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git-emergingtech\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_emergingtech_main_numbers",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\": \"New Visualization\", \"type\": \"metric\", \"params\": {\"fontSize\": \"12\", \"metric\": {\"percentageMode\": false, \"useRanges\": false, \"colorSchema\": \"Green to Red\", \"metricColorMode\": \"None\", \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"labels\": {\"show\": true}, \"invertColors\": false, \"style\": {\"bgFill\": \"#000\", \"bgColor\": false, \"labelColor\": false, \"subText\": \"\", \"fontSize\": \"12\"}}}, \"aggs\": [{\"id\": \"1\", \"type\": \"cardinality\", \"schema\": \"metric\", \"params\": {\"field\": \"hash\", \"customLabel\": \"# Commits\"}}, {\"id\": \"2\", \"type\": \"cardinality\", \"schema\": \"metric\", \"params\": {\"field\": \"author_uuid\", \"customLabel\": \"# Authors\"}}, {\"id\": \"3\", \"type\": \"cardinality\", \"schema\": \"metric\", \"params\": {\"field\": \"repo_name\", \"customLabel\": \"# Repositories\"}}, {\"id\": \"4\", \"type\": \"cardinality\", \"schema\": \"metric\", \"params\": {\"field\": \"project\", \"customLabel\": \"# Projects\"}}], \"listeners\": {}}"
+                "references": [
+                    {
+                        "id": "git-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_emergingtech_main_numbers",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"New Visualization\",\"type\":\"metric\",\"params\":{\"fontSize\":\"12\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":\"12\"}}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"hash\",\"customLabel\":\"# Commits\"}},{\"id\":\"2\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"# Authors\"}},{\"id\":\"3\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"repo_name\",\"customLabel\":\"# Repositories\"}},{\"id\":\"4\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"project\",\"customLabel\":\"# Projects\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_emergingtech_new_contributors",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git-emergingtech\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_emergingtech_new_contributors",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"git_emergingtech_new_contributors\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"grimoire_creation_date\",\"customLabel\":\"First Commit Date\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Developer\"}},{\"id\":\"3\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Commits\"}},{\"id\":\"4\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_org_name\",\"size\":12,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Organization\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_emergingtech_new_contributors",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_emergingtech_new_contributors\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"grimoire_creation_date\",\"customLabel\":\"First Commit Date\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Developer\"}},{\"id\":\"3\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Commits\"}},{\"id\":\"4\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_org_name\",\"size\":12,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Organization\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_emergingtech_organizations",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git-emergingtech\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_emergingtech_organizations",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"New Visualization\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"author_org_name\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_emergingtech_organizations",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"New Visualization\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"author_org_name\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_emergingtech_projects",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git-emergingtech\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_emergingtech_projects",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"git_emergingtech_projects\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"# Authors\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"project\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Project\"}},{\"id\":\"3\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Commits\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_emergingtech_projects",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_emergingtech_projects\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"# Authors\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"project\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Project\"}},{\"id\":\"3\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Commits\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_emergingtech_repositories",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git-emergingtech\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_emergingtech_repositories",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"New Visualization\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"hash\",\"customLabel\":\"# Commits\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"repo_name\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Repository\"}},{\"id\":\"3\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"# Authors\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git-emergingtech",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_emergingtech_repositories",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"New Visualization\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"hash\",\"customLabel\":\"# Commits\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"repo_name\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Repository\"}},{\"id\":\"3\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"# Authors\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_title",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_title",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"git_title\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### Git\"},\"aggs\":[],\"listeners\":{}}"
+                "references": [],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+                    },
+                    "title": "git_title",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_title\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### Git\"},\"aggs\":[],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "github_issues_title",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "github_issues_title",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"github_issues_title\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### GitHub Issues\"},\"aggs\":[],\"listeners\":{}}"
+                "references": [],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+                    },
+                    "title": "github_issues_title",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"github_issues_title\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### GitHub Issues\"},\"aggs\":[],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "github_prs_title",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "github_prs_title",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"github_prs_title\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### GitHub Pull Requests\"},\"aggs\":[],\"listeners\":{}}"
+                "references": [],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+                    },
+                    "title": "github_prs_title",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"github_prs_title\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### GitHub Pull Requests\"},\"aggs\":[],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_code_areas_title",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
-                },
-                "title": "git_code_areas_title",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"git_code_areas_title\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### Git Code Areas\"},\"aggs\":[],\"listeners\":{}}"
+                "references": [],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+                    },
+                    "title": "git_code_areas_title",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_code_areas_title\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### Git Code Areas\"},\"aggs\":[],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_areas_code_emergingtech_authors",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git_areas_of_code\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_areas_code_emergingtech_authors",
-                "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-                "version": 1,
-                "visState": "{\"title\":\"git_areas_code_emergingtech_authors\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Modified Files\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Author\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"addedlines\",\"customLabel\":\"# Added Lines\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"removedlines\",\"customLabel\":\"# Removed Lines\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git_areas_of_code",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_areas_code_emergingtech_authors",
+                    "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_areas_code_emergingtech_authors\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Modified Files\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":99999,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Author\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"addedlines\",\"customLabel\":\"# Added Lines\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"removedlines\",\"customLabel\":\"# Removed Lines\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_areas_code_emergingtech_domains",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git_areas_of_code\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
-                },
-                "title": "git_areas_code_emergingtech_domains",
-                "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-                "version": 1,
-                "visState": "{\"title\":\"git_areas_code_emergingtech_domains\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Files Touched\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"git_author_domain\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Domains\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"hash\",\"json\":\"\",\"customLabel\":\"# Commits\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git_areas_of_code",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_areas_code_emergingtech_domains",
+                    "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_areas_code_emergingtech_domains\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Files Touched\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"git_author_domain\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Domains\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"hash\",\"json\":\"\",\"customLabel\":\"# Commits\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_areas_code_emergingtech_files",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git_areas_of_code\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_areas_code_emergingtech_files",
-                "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-                "version": 1,
-                "visState": "{\"title\":\"git_areas_code_emergingtech_files\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Modifications\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"filepath\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Filepath\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"project\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Project\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"# Developers\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git_areas_of_code",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_areas_code_emergingtech_files",
+                    "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_areas_code_emergingtech_files\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Modifications\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"filepath\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"json\":\"{\\\"shard_size\\\": 1000}\",\"customLabel\":\"Filepath\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"project\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Project\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"# Developers\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_areas_code_emergingtech_organizations",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git_areas_of_code\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_areas_code_emergingtech_organizations",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"git_areas_code_emergingtech_organizations\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"author_org_name\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Organization\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git_areas_of_code",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_areas_code_emergingtech_organizations",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_areas_code_emergingtech_organizations\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"author_org_name\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Organization\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_areas_code_emergingtech_projects",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git_areas_of_code\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_areas_code_emergingtech_projects",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"git_areas_code_emergingtech_projects\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"project\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git_areas_of_code",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_areas_code_emergingtech_projects",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_areas_code_emergingtech_projects\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"project\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_areas_of_code_file_exts",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git_areas_of_code\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_areas_of_code_file_exts",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"git_areas_of_code_file_exts\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"file_ext\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git_areas_of_code",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_areas_of_code_file_exts",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_areas_of_code_file_exts\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"file_ext\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_areas_of_code_file_types",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git_areas_of_code\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_areas_of_code_file_types",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"git_areas_of_code_file_types\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"filetype\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git_areas_of_code",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_areas_of_code_file_types",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_areas_of_code_file_types\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"filetype\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "git_areas_of_code_path_elements",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"git_areas_of_code\",\"query\":{\"query_string\":{\"query\":\"-fileaction:\\\"-\\\"\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "git_areas_of_code_path_elements",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"git_areas_of_code_path_elements\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"file_path_list\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "git_areas_of_code",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "git_areas_of_code_path_elements",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"git_areas_of_code_path_elements\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"file_path_list\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+                }
             }
         }
     ]

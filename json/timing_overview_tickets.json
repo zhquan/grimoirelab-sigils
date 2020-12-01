@@ -2,18 +2,81 @@
     "dashboard": {
         "id": "69208f40-18cb-11e9-ba47-d5cbef43f8d3",
         "value": {
-            "description": "Timing overview panel for tickets/issues by Bitergia",
-            "hits": 0,
-            "kibanaSavedObjectMeta": {
-                "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":\"Closed Tickets\",\"disabled\":false,\"index\":\"a04a4150-18bc-11e9-872f-e17019e68d6d\",\"key\":\"state\",\"negate\":false,\"params\":{\"query\":\"closed\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"closed\"},\"query\":{\"match\":{\"state\":{\"query\":\"closed\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"exists\":{\"field\":\"time_to_close_days\"},\"meta\":{\"alias\":\"With Time To Close\",\"disabled\":false,\"index\":\"a04a4150-18bc-11e9-872f-e17019e68d6d\",\"key\":\"time_to_close_days\",\"negate\":false,\"type\":\"exists\",\"value\":\"exists\"}},{\"$state\":{\"store\":\"appState\"},\"exists\":{\"field\":\"time_to_first_attention\"},\"meta\":{\"alias\":\"With Time to First Attention\",\"disabled\":false,\"index\":\"a04a4150-18bc-11e9-872f-e17019e68d6d\",\"key\":\"time_to_first_attention\",\"negate\":false,\"type\":\"exists\",\"value\":\"exists\"}},{\"meta\":{\"index\":\"a04a4150-18bc-11e9-872f-e17019e68d6d\",\"negate\":true,\"disabled\":false,\"alias\":\"Bots\",\"type\":\"phrase\",\"key\":\"author_bot\",\"value\":\"true\",\"params\":{\"query\":true,\"type\":\"phrase\"}},\"query\":{\"match\":{\"author_bot\":{\"query\":true,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+            "dashboard": {
+                "description": "Timing overview panel for tickets/issues by Bitergia",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"highlightAll\":true,\"version\":true,\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":\"Closed Tickets\",\"disabled\":false,\"key\":\"state\",\"negate\":false,\"params\":{\"query\":\"closed\"},\"type\":\"phrase\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"state\":{\"query\":\"closed\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"exists\":{\"field\":\"time_to_close_days\"},\"meta\":{\"alias\":\"With Time To Close\",\"disabled\":false,\"key\":\"time_to_close_days\",\"negate\":false,\"type\":\"exists\",\"value\":\"exists\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index\"}},{\"$state\":{\"store\":\"appState\"},\"exists\":{\"field\":\"time_to_first_attention\"},\"meta\":{\"alias\":\"With Time to First Attention\",\"disabled\":false,\"key\":\"time_to_first_attention\",\"negate\":false,\"type\":\"exists\",\"value\":\"exists\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[2].meta.index\"}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":\"Bots\",\"disabled\":false,\"key\":\"author_bot\",\"negate\":true,\"params\":{\"query\":true},\"type\":\"phrase\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[3].meta.index\"},\"query\":{\"match\":{\"author_bot\":{\"query\":true,\"type\":\"phrase\"}}}}]}"
+                },
+                "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+                "panelsJSON": "[{\"embeddableConfig\":{\"title\":\"Avg. Time to Attend and Close Tickets\"},\"gridData\":{\"h\":11,\"i\":\"1\",\"w\":22,\"x\":10,\"y\":0},\"panelIndex\":\"1\",\"title\":\"Avg. Time to Attend and Close Tickets\",\"version\":\"7.9.1\",\"panelRefName\":\"panel_0\"},{\"embeddableConfig\":{\"title\":\"Repositories (Time to Close in Days)\"},\"gridData\":{\"h\":21,\"i\":\"2\",\"w\":16,\"x\":32,\"y\":0},\"panelIndex\":\"2\",\"title\":\"Repositories (Time to Close in Days)\",\"version\":\"7.9.1\",\"panelRefName\":\"panel_1\"},{\"embeddableConfig\":{\"title\":\"Median Time to First Attention\"},\"gridData\":{\"h\":10,\"i\":\"4\",\"w\":8,\"x\":16,\"y\":11},\"panelIndex\":\"4\",\"title\":\"Median Time to First Attention\",\"version\":\"7.9.1\",\"panelRefName\":\"panel_2\"},{\"embeddableConfig\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"title\":\"Avg. Time to Close\",\"vis\":{\"defaultColors\":{\"0 - 7\":\"rgb(0,104,55)\",\"30 - 90\":\"rgb(165,0,38)\",\"7 - 30\":\"rgb(255,255,190)\"},\"legendOpen\":false}},\"gridData\":{\"h\":10,\"i\":\"5\",\"w\":8,\"x\":8,\"y\":11},\"panelIndex\":\"5\",\"title\":\"Avg. Time to Close\",\"version\":\"7.9.1\",\"panelRefName\":\"panel_3\"},{\"embeddableConfig\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"title\":\"Avg. Time to First Attention\",\"vis\":{\"defaultColors\":{\"0 - 1\":\"rgb(0,104,55)\",\"1 - 3\":\"rgb(255,255,190)\",\"3 - 7\":\"rgb(165,0,38)\"},\"legendOpen\":false}},\"gridData\":{\"h\":10,\"i\":\"6\",\"w\":8,\"x\":0,\"y\":11},\"panelIndex\":\"6\",\"title\":\"Avg. Time to First Attention\",\"version\":\"7.9.1\",\"panelRefName\":\"panel_4\"},{\"embeddableConfig\":{\"title\":\"Median Time to Close\"},\"gridData\":{\"h\":10,\"i\":\"7\",\"w\":8,\"x\":24,\"y\":11},\"panelIndex\":\"7\",\"title\":\"Median Time to Close\",\"version\":\"7.9.1\",\"panelRefName\":\"panel_5\"},{\"embeddableConfig\":{\"title\":\"Efficiency: Timing Overview\"},\"gridData\":{\"h\":11,\"i\":\"8\",\"w\":10,\"x\":0,\"y\":0},\"panelIndex\":\"8\",\"title\":\"Efficiency: Timing Overview\",\"version\":\"7.9.1\",\"panelRefName\":\"panel_6\"},{\"embeddableConfig\":{\"title\":\"Efficiency: Timing overview\"},\"gridData\":{\"h\":12,\"i\":\"9\",\"w\":48,\"x\":0,\"y\":21},\"panelIndex\":\"9\",\"title\":\"Efficiency: Timing overview\",\"version\":\"7.9.1\",\"panelRefName\":\"panel_7\"}]",
+                "timeRestore": false,
+                "title": "Efficiency: Timing overview",
+                "version": 1
             },
-            "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
-            "panelsJSON": "[{\"gridData\":{\"h\":3,\"i\":\"1\",\"w\":6,\"x\":2,\"y\":0},\"id\":\"3d6d30a0-18a4-11e9-872f-e17019e68d6d\",\"panelIndex\":\"1\",\"title\":\"Avg. Time to Attend and Close Tickets\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":6,\"i\":\"2\",\"w\":4,\"x\":8,\"y\":0},\"id\":\"478843c0-18c4-11e9-872f-e17019e68d6d\",\"panelIndex\":\"2\",\"title\":\"Repositories (Time to Close in Days)\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":3,\"i\":\"4\",\"w\":2,\"x\":4,\"y\":3},\"id\":\"64450d00-18cd-11e9-ba47-d5cbef43f8d3\",\"panelIndex\":\"4\",\"title\":\"Median Time to First Attention\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":3,\"i\":\"5\",\"w\":2,\"x\":2,\"y\":3},\"id\":\"ee7750f0-18cd-11e9-ba47-d5cbef43f8d3\",\"panelIndex\":\"5\",\"title\":\"Avg. Time to Close\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":3,\"i\":\"6\",\"w\":2,\"x\":0,\"y\":3},\"id\":\"2c8b3140-18ce-11e9-ba47-d5cbef43f8d3\",\"panelIndex\":\"6\",\"title\":\"Avg. Time to First Attention\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":3,\"i\":\"7\",\"w\":2,\"x\":6,\"y\":3},\"id\":\"60ed8820-18ce-11e9-ba47-d5cbef43f8d3\",\"panelIndex\":\"7\",\"title\":\"Median Time to Close\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":3,\"i\":\"8\",\"w\":2,\"x\":0,\"y\":0},\"id\":\"57679e60-18d5-11e9-ba47-d5cbef43f8d3\",\"panelIndex\":\"8\",\"title\":\"Efficiency: Timing Overview\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":3,\"i\":\"9\",\"w\":12,\"x\":0,\"y\":6},\"id\":\"d481cdf0-18d8-11e9-ba47-d5cbef43f8d3\",\"panelIndex\":\"9\",\"title\":\"Efficiency: Timing overview\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"}]",
-            "release_date": "2019-10-30T13:17:10.577264",
-            "timeRestore": false,
-            "title": "Efficiency: Timing overview",
-            "uiStateJSON": "{\"P-2\":{\"vis\":{\"params\":{\"config\":{\"searchKeyword\":\"\"},\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-3\":{\"vis\":{\"defaultColors\":{\"0 - 7\":\"rgb(0,104,55)\",\"30 - 90\":\"rgb(165,0,38)\",\"7 - 30\":\"rgb(255,255,190)\"},\"legendOpen\":false}},\"P-4\":{\"vis\":{\"defaultColors\":{\"0 - 1\":\"rgb(0,104,55)\",\"1 - 3\":\"rgb(255,255,190)\",\"3 - 7\":\"rgb(165,0,38)\"},\"legendOpen\":false}},\"P-5\":{\"vis\":{\"defaultColors\":{\"0 - 7\":\"rgb(0,104,55)\",\"7 - 30\":\"rgb(255,255,190)\",\"30 - 90\":\"rgb(165,0,38)\"},\"legendOpen\":false}},\"P-6\":{\"vis\":{\"defaultColors\":{\"0 - 1\":\"rgb(0,104,55)\",\"1 - 3\":\"rgb(255,255,190)\",\"3 - 7\":\"rgb(165,0,38)\"},\"legendOpen\":false}},\"P-7\":{\"vis\":{\"defaultColors\":{\"0 - 7\":\"rgb(0,104,55)\",\"7 - 30\":\"rgb(255,255,190)\",\"30 - 90\":\"rgb(165,0,38)\"},\"legendOpen\":false}}}",
-            "version": 1
+            "references": [
+                {
+                    "id": "a04a4150-18bc-11e9-872f-e17019e68d6d",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "a04a4150-18bc-11e9-872f-e17019e68d6d",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "a04a4150-18bc-11e9-872f-e17019e68d6d",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[2].meta.index",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "a04a4150-18bc-11e9-872f-e17019e68d6d",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[3].meta.index",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "3d6d30a0-18a4-11e9-872f-e17019e68d6d",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "478843c0-18c4-11e9-872f-e17019e68d6d",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "64450d00-18cd-11e9-ba47-d5cbef43f8d3",
+                    "name": "panel_2",
+                    "type": "visualization"
+                },
+                {
+                    "id": "ee7750f0-18cd-11e9-ba47-d5cbef43f8d3",
+                    "name": "panel_3",
+                    "type": "visualization"
+                },
+                {
+                    "id": "2c8b3140-18ce-11e9-ba47-d5cbef43f8d3",
+                    "name": "panel_4",
+                    "type": "visualization"
+                },
+                {
+                    "id": "60ed8820-18ce-11e9-ba47-d5cbef43f8d3",
+                    "name": "panel_5",
+                    "type": "visualization"
+                },
+                {
+                    "id": "57679e60-18d5-11e9-ba47-d5cbef43f8d3",
+                    "name": "panel_6",
+                    "type": "visualization"
+                },
+                {
+                    "id": "d481cdf0-18d8-11e9-ba47-d5cbef43f8d3",
+                    "name": "panel_7",
+                    "type": "visualization"
+                }
+            ],
+            "release_date": "2020-11-26T17:51:46.384896"
         }
     },
     "searches": [],
@@ -21,105 +84,175 @@
         {
             "id": "3d6d30a0-18a4-11e9-872f-e17019e68d6d",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{}"
-                },
-                "title": "ocean_tickets_issues_timing",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"ocean_tickets_issues_timing\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=all_enriched_tickets, timefield=grimoire_creation_date, metric=avg:time_to_close_days).bars(8).label('Avg. Time to Close (days)').color(#155a3c),\\n\\n.es(index=all_enriched_tickets, timefield=grimoire_creation_date, metric=avg:time_to_close_days).trend().label('Avg. Time to Close trend').color(#94c3af),\\n\\n.es(index=all_enriched_tickets, timefield=grimoire_creation_date, metric=avg:time_to_first_attention).bars(stack=false,width=4).label('Avg. Time to First Attention days)').color(#ffb745),\\n\\n.es(index=all_enriched_tickets, timefield=grimoire_creation_date, metric=avg:time_to_first_attention).trend().label('Avg. Time to First Attention trend').color(#d8bd49)\",\"interval\":\"auto\"},\"aggs\":[]}"
+                "references": [],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{}"
+                    },
+                    "title": "ocean_tickets_issues_timing",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"ocean_tickets_issues_timing\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=all_enriched_tickets, timefield=grimoire_creation_date, metric=avg:time_to_close_days).bars(8).label('Avg. Time to Close (days)').color(#155a3c),\\n\\n.es(index=all_enriched_tickets, timefield=grimoire_creation_date, metric=avg:time_to_close_days).trend().label('Avg. Time to Close trend').color(#94c3af),\\n\\n.es(index=all_enriched_tickets, timefield=grimoire_creation_date, metric=avg:time_to_first_attention).bars(stack=false,width=4).label('Avg. Time to First Attention days)').color(#ffb745),\\n\\n.es(index=all_enriched_tickets, timefield=grimoire_creation_date, metric=avg:time_to_first_attention).trend().label('Avg. Time to First Attention trend').color(#d8bd49)\",\"interval\":\"auto\"},\"aggs\":[]}"
+                }
             }
         },
         {
             "id": "478843c0-18c4-11e9-872f-e17019e68d6d",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"a04a4150-18bc-11e9-872f-e17019e68d6d\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
-                },
-                "title": "ocean_tickets_repositories",
-                "uiStateJSON": "{\"vis\":{\"params\":{\"config\":{\"searchKeyword\":\"\"},\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-                "version": 1,
-                "visState": "{\"title\":\"ocean_tickets_repositories\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"percents\":[50],\"customLabel\":\"Median\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"repository\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"Repository\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"customLabel\":\"Avg.\"}}]}"
+                "references": [
+                    {
+                        "id": "a04a4150-18bc-11e9-872f-e17019e68d6d",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "ocean_tickets_repositories",
+                    "uiStateJSON": "{\"vis\":{\"params\":{\"config\":{\"searchKeyword\":\"\"},\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"ocean_tickets_repositories\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"percents\":[50],\"customLabel\":\"Median\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"repository\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"_key\",\"customLabel\":\"Repository\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"customLabel\":\"Avg.\"}}]}"
+                }
             }
         },
         {
             "id": "64450d00-18cd-11e9-ba47-d5cbef43f8d3",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"a04a4150-18bc-11e9-872f-e17019e68d6d\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-                },
-                "title": "ocean_tickets_stats_median_time_to_first_attention",
-                "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 1\":\"rgb(0,104,55)\",\"1 - 3\":\"rgb(255,255,190)\",\"3 - 7\":\"rgb(165,0,38)\"}},\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}}",
-                "version": 1,
-                "visState": "{\"title\":\"ocean_tickets_stats_median_time_to_first_attention\",\"type\":\"gauge\",\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":false,\"gauge\":{\"verticalSplit\":false,\"extendRange\":true,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":1},{\"from\":1,\"to\":3},{\"from\":3,\"to\":7}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"#eee\",\"bgColor\":false,\"subText\":\"days\",\"fontSize\":60,\"labelColor\":true}}},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_first_attention\",\"percents\":[50],\"customLabel\":\"Median time to first attention\"}}]}"
+                "references": [
+                    {
+                        "id": "a04a4150-18bc-11e9-872f-e17019e68d6d",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "ocean_tickets_stats_median_time_to_first_attention",
+                    "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 1\":\"rgb(0,104,55)\",\"1 - 3\":\"rgb(255,255,190)\",\"3 - 7\":\"rgb(165,0,38)\"}},\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"ocean_tickets_stats_median_time_to_first_attention\",\"type\":\"gauge\",\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":false,\"gauge\":{\"extendRange\":true,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":1},{\"from\":1,\"to\":3},{\"from\":3,\"to\":7}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"#eee\",\"bgColor\":false,\"subText\":\"days\",\"fontSize\":60,\"labelColor\":true},\"alignment\":\"horizontal\"}},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_first_attention\",\"percents\":[50],\"customLabel\":\"Median time to first attention\"}}]}"
+                }
             }
         },
         {
             "id": "ee7750f0-18cd-11e9-ba47-d5cbef43f8d3",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"a04a4150-18bc-11e9-872f-e17019e68d6d\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-                },
-                "title": "ocean_tickets_stats_average_time_to_close",
-                "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 7\":\"rgb(0,104,55)\",\"7 - 30\":\"rgb(255,255,190)\",\"30 - 90\":\"rgb(165,0,38)\"}},\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}}",
-                "version": 1,
-                "visState": "{\"title\":\"ocean_tickets_stats_average_time_to_close\",\"type\":\"gauge\",\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":false,\"gauge\":{\"verticalSplit\":false,\"extendRange\":true,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":7},{\"from\":7,\"to\":30},{\"from\":30,\"to\":90}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"#eee\",\"bgColor\":false,\"subText\":\"days\",\"fontSize\":60,\"labelColor\":true}}},\"aggs\":[{\"id\":\"3\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"customLabel\":\"Avg. time to close\"}}]}"
+                "references": [
+                    {
+                        "id": "a04a4150-18bc-11e9-872f-e17019e68d6d",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "ocean_tickets_stats_average_time_to_close",
+                    "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 7\":\"rgb(0,104,55)\",\"7 - 30\":\"rgb(255,255,190)\",\"30 - 90\":\"rgb(165,0,38)\"}},\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"ocean_tickets_stats_average_time_to_close\",\"type\":\"gauge\",\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":false,\"gauge\":{\"extendRange\":true,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":7},{\"from\":7,\"to\":30},{\"from\":30,\"to\":90}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"#eee\",\"bgColor\":false,\"subText\":\"days\",\"fontSize\":60,\"labelColor\":true},\"alignment\":\"horizontal\"}},\"aggs\":[{\"id\":\"3\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"customLabel\":\"Avg. time to close\"}}]}"
+                }
             }
         },
         {
             "id": "2c8b3140-18ce-11e9-ba47-d5cbef43f8d3",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"a04a4150-18bc-11e9-872f-e17019e68d6d\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-                },
-                "title": "ocean_tickets_stats_average_time_to_first_attention",
-                "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 1\":\"rgb(0,104,55)\",\"1 - 3\":\"rgb(255,255,190)\",\"3 - 7\":\"rgb(165,0,38)\"}},\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}}",
-                "version": 1,
-                "visState": "{\"title\":\"ocean_tickets_stats_average_time_to_first_attention\",\"type\":\"gauge\",\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":false,\"gauge\":{\"verticalSplit\":false,\"extendRange\":true,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":1},{\"from\":1,\"to\":3},{\"from\":3,\"to\":7}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"#eee\",\"bgColor\":false,\"subText\":\"days\",\"fontSize\":60,\"labelColor\":true}}},\"aggs\":[{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_first_attention\",\"customLabel\":\"Avg. time to first attention\"}}]}"
+                "references": [
+                    {
+                        "id": "a04a4150-18bc-11e9-872f-e17019e68d6d",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "ocean_tickets_stats_average_time_to_first_attention",
+                    "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 1\":\"rgb(0,104,55)\",\"1 - 3\":\"rgb(255,255,190)\",\"3 - 7\":\"rgb(165,0,38)\"}},\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"ocean_tickets_stats_average_time_to_first_attention\",\"type\":\"gauge\",\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":false,\"gauge\":{\"extendRange\":true,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":1},{\"from\":1,\"to\":3},{\"from\":3,\"to\":7}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"#eee\",\"bgColor\":false,\"subText\":\"days\",\"fontSize\":60,\"labelColor\":true},\"alignment\":\"horizontal\"}},\"aggs\":[{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_first_attention\",\"customLabel\":\"Avg. time to first attention\"}}]}"
+                }
             }
         },
         {
             "id": "60ed8820-18ce-11e9-ba47-d5cbef43f8d3",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"a04a4150-18bc-11e9-872f-e17019e68d6d\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-                },
-                "title": "ocean_tickets_stats_median_time_to_close",
-                "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 7\":\"rgb(0,104,55)\",\"7 - 30\":\"rgb(255,255,190)\",\"30 - 90\":\"rgb(165,0,38)\"}},\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}}",
-                "version": 1,
-                "visState": "{\"title\":\"ocean_tickets_stats_median_time_to_close\",\"type\":\"gauge\",\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":false,\"gauge\":{\"verticalSplit\":false,\"extendRange\":true,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":7},{\"from\":7,\"to\":30},{\"from\":30,\"to\":90}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"#eee\",\"bgColor\":false,\"subText\":\"days\",\"fontSize\":60,\"labelColor\":true}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"percents\":[50],\"customLabel\":\"Median time to close\"}}]}"
+                "references": [
+                    {
+                        "id": "a04a4150-18bc-11e9-872f-e17019e68d6d",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "ocean_tickets_stats_median_time_to_close",
+                    "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 7\":\"rgb(0,104,55)\",\"7 - 30\":\"rgb(255,255,190)\",\"30 - 90\":\"rgb(165,0,38)\"}},\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"ocean_tickets_stats_median_time_to_close\",\"type\":\"gauge\",\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":false,\"gauge\":{\"extendRange\":true,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":7},{\"from\":7,\"to\":30},{\"from\":30,\"to\":90}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"#eee\",\"bgColor\":false,\"subText\":\"days\",\"fontSize\":60,\"labelColor\":true},\"alignment\":\"horizontal\"}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"time_to_close_days\",\"percents\":[50],\"customLabel\":\"Median time to close\"}}]}"
+                }
             }
         },
         {
             "id": "57679e60-18d5-11e9-ba47-d5cbef43f8d3",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{}"
-                },
-                "title": "ocean_tickets_filters",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"ocean_tickets_filters\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1547563906584\",\"indexPattern\":\"a04a4150-18bc-11e9-872f-e17019e68d6d\",\"fieldName\":\"data_source\",\"label\":\"Data Source\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":false,\"size\":5,\"order\":\"desc\"}},{\"id\":\"1547563929584\",\"indexPattern\":\"a04a4150-18bc-11e9-872f-e17019e68d6d\",\"fieldName\":\"author_org_name\",\"label\":\"Organizations\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":50,\"order\":\"desc\"}},{\"id\":\"1547563962615\",\"indexPattern\":\"a04a4150-18bc-11e9-872f-e17019e68d6d\",\"fieldName\":\"project\",\"label\":\"Projects\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":50,\"order\":\"desc\"}}],\"updateFiltersOnChange\":true},\"aggs\":[]}"
+                "references": [
+                    {
+                        "id": "a04a4150-18bc-11e9-872f-e17019e68d6d",
+                        "name": "control_0_index_pattern",
+                        "type": "index-pattern"
+                    },
+                    {
+                        "id": "a04a4150-18bc-11e9-872f-e17019e68d6d",
+                        "name": "control_1_index_pattern",
+                        "type": "index-pattern"
+                    },
+                    {
+                        "id": "a04a4150-18bc-11e9-872f-e17019e68d6d",
+                        "name": "control_2_index_pattern",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{}"
+                    },
+                    "title": "ocean_tickets_filters",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"ocean_tickets_filters\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1547563906584\",\"fieldName\":\"data_source\",\"label\":\"Data Source\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":false,\"size\":5,\"order\":\"desc\"},\"indexPatternRefName\":\"control_0_index_pattern\"},{\"id\":\"1547563929584\",\"fieldName\":\"author_org_name\",\"label\":\"Organizations\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":50,\"order\":\"desc\"},\"indexPatternRefName\":\"control_1_index_pattern\"},{\"id\":\"1547563962615\",\"fieldName\":\"project\",\"label\":\"Projects\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":50,\"order\":\"desc\"},\"indexPatternRefName\":\"control_2_index_pattern\"}],\"updateFiltersOnChange\":true},\"aggs\":[]}"
+                }
             }
         },
         {
             "id": "d481cdf0-18d8-11e9-ba47-d5cbef43f8d3",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{}"
-                },
-                "title": "ocean_tickets_efficiency_timing_help",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"ocean_tickets_efficiency_timing_help\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"markdown\":\"This panel focuses on time to first attention and time to close tickets.\\n\\n**Bar chart** compares the difference in average between first attention and closing time of tickets created in a given time frame. Ideal case would be low values for both, which means contributors are attended soon and tickets are closed in a reasonable time. Worst case would be having long bars for both, which means customers have to wait a long time to get our first attention and also closing time is of course longer than desired.\\n\\n**Trends** in bar chart give an idea about where are we going to.\\n\\n**Gauges** show times in average and median to complement bar chart with a more general view.\\n\\n[See complete panel documentation](https://chaoss.github.io/grimoirelab-sigils/panels/efficiency-timing-overview/)\"},\"aggs\":[]}"
+                "references": [],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{}"
+                    },
+                    "title": "ocean_tickets_efficiency_timing_help",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"ocean_tickets_efficiency_timing_help\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"markdown\":\"This panel focuses on time to first attention and time to close tickets.\\n\\n**Bar chart** compares the difference in average between first attention and closing time of tickets created in a given time frame. Ideal case would be low values for both, which means contributors are attended soon and tickets are closed in a reasonable time. Worst case would be having long bars for both, which means customers have to wait a long time to get our first attention and also closing time is of course longer than desired.\\n\\n**Trends** in bar chart give an idea about where are we going to.\\n\\n**Gauges** show times in average and median to complement bar chart with a more general view.\\n\\n[See complete panel documentation](https://chaoss.github.io/grimoirelab-sigils/panels/efficiency-timing-overview/)\"},\"aggs\":[]}"
+                }
             }
         }
     ]

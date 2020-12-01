@@ -2,18 +2,76 @@
     "dashboard": {
         "id": "Mozilla-Club",
         "value": {
-            "description": "",
-            "hits": 0,
-            "kibanaSavedObjectMeta": {
-                "searchSourceJSON": "{\"filter\":[{\"meta\":{\"index\":\"mozillaclub\",\"negate\":true,\"disabled\":false,\"alias\":\"Bots\",\"type\":\"phrase\",\"key\":\"author_bot\",\"value\":\"true\",\"params\":{\"query\":true,\"type\":\"phrase\"}},\"query\":{\"match\":{\"author_bot\":{\"query\":true,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\"}}},\"highlightAll\":true,\"version\":true}"
+            "dashboard": {
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\",\"time_zone\":\"Europe/Madrid\"}}},\"highlightAll\":true,\"version\":true,\"filter\":[{\"meta\":{\"negate\":true,\"disabled\":false,\"alias\":\"Bots\",\"type\":\"phrase\",\"key\":\"author_bot\",\"params\":{\"query\":true},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"author_bot\":{\"query\":true,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+                },
+                "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true}",
+                "panelsJSON": "[{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":6,\"i\":\"1\"},\"panelIndex\":\"1\",\"embeddableConfig\":{\"title\":\"Summary\"},\"title\":\"Summary\",\"panelRefName\":\"panel_0\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":6,\"w\":24,\"h\":6,\"i\":\"2\"},\"panelIndex\":\"2\",\"embeddableConfig\":{\"title\":\"Meetings\"},\"title\":\"Meetings\",\"panelRefName\":\"panel_1\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":12,\"w\":24,\"h\":6,\"i\":\"3\"},\"panelIndex\":\"3\",\"embeddableConfig\":{\"title\":\"Representatives/Countries\"},\"title\":\"Representatives/Countries\",\"panelRefName\":\"panel_2\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":32,\"w\":48,\"h\":15,\"i\":\"4\"},\"panelIndex\":\"4\",\"embeddableConfig\":{\"title\":\"Clubs\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"title\":\"Clubs\",\"panelRefName\":\"panel_3\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":36,\"y\":16,\"w\":12,\"h\":16,\"i\":\"5\"},\"panelIndex\":\"5\",\"embeddableConfig\":{\"title\":\"Countries\"},\"title\":\"Countries\",\"panelRefName\":\"panel_4\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":47,\"w\":48,\"h\":28,\"i\":\"6\"},\"panelIndex\":\"6\",\"embeddableConfig\":{\"title\":\"Last Events\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"title\":\"Last Events\",\"panelRefName\":\"panel_5\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":18,\"w\":24,\"h\":14,\"i\":\"7\"},\"panelIndex\":\"7\",\"embeddableConfig\":{\"title\":\"Representatives\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"title\":\"Representatives\",\"panelRefName\":\"panel_6\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":36,\"y\":0,\"w\":12,\"h\":16,\"i\":\"8\"},\"panelIndex\":\"8\",\"embeddableConfig\":{\"title\":\"Countries\"},\"title\":\"Countries\",\"panelRefName\":\"panel_7\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":24,\"y\":0,\"w\":12,\"h\":16,\"i\":\"9\"},\"panelIndex\":\"9\",\"embeddableConfig\":{\"title\":\"Organizations\"},\"title\":\"Organizations\",\"panelRefName\":\"panel_8\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":24,\"y\":16,\"w\":12,\"h\":16,\"i\":\"10\"},\"panelIndex\":\"10\",\"embeddableConfig\":{\"title\":\"Organizations\"},\"title\":\"Organizations\",\"panelRefName\":\"panel_9\"}]",
+                "timeRestore": false,
+                "title": "Mozilla Club",
+                "version": 1
             },
-            "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true}",
-            "panelsJSON": "[{\"gridData\":{\"h\":2,\"i\":\"1\",\"w\":6,\"x\":0,\"y\":0},\"id\":\"mozillaclub_main_metrics\",\"panelIndex\":\"1\",\"title\":\"Summary\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":2,\"i\":\"2\",\"w\":6,\"x\":0,\"y\":2},\"id\":\"mozillaclub_events_evolutionary\",\"panelIndex\":\"2\",\"title\":\"Meetings\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":2,\"i\":\"3\",\"w\":6,\"x\":0,\"y\":4},\"id\":\"mozillaclub_representatives_countries\",\"panelIndex\":\"3\",\"title\":\"Representatives/Countries\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":5,\"i\":\"4\",\"w\":12,\"x\":0,\"y\":11},\"id\":\"mozillaclub_clubs\",\"panelIndex\":\"4\",\"title\":\"Clubs\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":5,\"i\":\"5\",\"w\":3,\"x\":9,\"y\":5},\"id\":\"mozillaclub_countries\",\"panelIndex\":\"5\",\"title\":\"Countries\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":10,\"i\":\"6\",\"w\":12,\"x\":0,\"y\":16},\"id\":\"mozillaclub_last_events\",\"panelIndex\":\"6\",\"title\":\"Last Events\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":5,\"i\":\"7\",\"w\":6,\"x\":0,\"y\":6},\"id\":\"mozillaclub_representatives_summary\",\"panelIndex\":\"7\",\"title\":\"Representatives\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":5,\"i\":\"8\",\"w\":3,\"x\":9,\"y\":0},\"id\":\"mozillaclub_events_countries\",\"panelIndex\":\"8\",\"title\":\"Countries\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":5,\"i\":\"9\",\"w\":3,\"x\":6,\"y\":0},\"id\":\"mozillaclub_organizations_authors\",\"panelIndex\":\"9\",\"title\":\"Organizations\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"},{\"gridData\":{\"h\":5,\"i\":\"10\",\"w\":3,\"x\":6,\"y\":5},\"id\":\"mozillaclub_organizations\",\"panelIndex\":\"10\",\"title\":\"Organizations\",\"type\":\"visualization\",\"version\":\"6.1.4-1\"}]",
-            "release_date": "2019-07-02T14:13:00.276359",
-            "timeRestore": false,
-            "title": "Mozilla Club",
-            "uiStateJSON": "{\"P-1\":{\"title\":\"Summary\"},\"P-10\":{\"title\":\"Organizations\",\"vis\":{\"params\":{\"config\":{\"searchKeyword\":\"\"},\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-2\":{\"title\":\"Meetings\"},\"P-3\":{\"title\":\"Representatives/Countries\"},\"P-4\":{\"title\":\"Clubs\",\"vis\":{\"params\":{\"config\":{\"searchKeyword\":\"\"},\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-5\":{\"title\":\"Countries\",\"vis\":{\"params\":{\"config\":{\"searchKeyword\":\"\"},\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-6\":{\"title\":\"Last Events\",\"vis\":{\"params\":{\"config\":{\"searchKeyword\":\"\"},\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-7\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"title\":\"Representatives\",\"vis\":{\"params\":{\"config\":{\"searchKeyword\":\"\"},\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-8\":{\"title\":\"Countries\"},\"P-9\":{\"title\":\"Organizations\"}}",
-            "version": 1
+            "references": [
+                {
+                    "id": "mozillaclub",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "mozillaclub_main_metrics",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "mozillaclub_events_evolutionary",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "mozillaclub_representatives_countries",
+                    "name": "panel_2",
+                    "type": "visualization"
+                },
+                {
+                    "id": "mozillaclub_clubs",
+                    "name": "panel_3",
+                    "type": "visualization"
+                },
+                {
+                    "id": "mozillaclub_countries",
+                    "name": "panel_4",
+                    "type": "visualization"
+                },
+                {
+                    "id": "mozillaclub_last_events",
+                    "name": "panel_5",
+                    "type": "visualization"
+                },
+                {
+                    "id": "mozillaclub_representatives_summary",
+                    "name": "panel_6",
+                    "type": "visualization"
+                },
+                {
+                    "id": "mozillaclub_events_countries",
+                    "name": "panel_7",
+                    "type": "visualization"
+                },
+                {
+                    "id": "mozillaclub_organizations_authors",
+                    "name": "panel_8",
+                    "type": "visualization"
+                },
+                {
+                    "id": "mozillaclub_organizations",
+                    "name": "panel_9",
+                    "type": "visualization"
+                }
+            ],
+            "release_date": "2020-12-01T15:29:47.393448"
         }
     },
     "searches": [],
@@ -21,131 +79,221 @@
         {
             "id": "mozillaclub_main_metrics",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"mozillaclub\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "mozillaclub_main_metrics",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\": \"mozillaclub_main_metrics\", \"type\": \"metric\", \"params\": {\"fontSize\": \"12\", \"metric\": {\"percentageMode\": false, \"useRanges\": false, \"colorSchema\": \"Green to Red\", \"metricColorMode\": \"None\", \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"labels\": {\"show\": true}, \"invertColors\": false, \"style\": {\"bgFill\": \"#000\", \"bgColor\": false, \"labelColor\": false, \"subText\": \"\", \"fontSize\": \"12\"}}}, \"aggs\": [{\"id\": \"1\", \"type\": \"count\", \"schema\": \"metric\", \"params\": {\"customLabel\": \"# Meetings\"}}, {\"id\": \"2\", \"type\": \"cardinality\", \"schema\": \"metric\", \"params\": {\"field\": \"Country\", \"customLabel\": \"# Countries\"}}, {\"id\": \"3\", \"type\": \"sum\", \"schema\": \"metric\", \"params\": {\"field\": \"Attendance\", \"customLabel\": \"# Attendees\"}}, {\"id\": \"4\", \"type\": \"median\", \"schema\": \"metric\", \"params\": {\"field\": \"Attendance\", \"percents\": [50], \"customLabel\": \"# People per Meeting in Median\"}}], \"listeners\": {}}"
+                "references": [
+                    {
+                        "id": "mozillaclub",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "mozillaclub_main_metrics",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"mozillaclub_main_metrics\",\"type\":\"metric\",\"params\":{\"fontSize\":\"12\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":\"12\"}}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Meetings\"}},{\"id\":\"2\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"Country\",\"customLabel\":\"# Countries\"}},{\"id\":\"3\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"Attendance\",\"customLabel\":\"# Attendees\"}},{\"id\":\"4\",\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"Attendance\",\"percents\":[50],\"customLabel\":\"# People per Meeting in Median\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "mozillaclub_events_evolutionary",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"mozillaclub\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
-                },
-                "title": "mozillaclub_events_evolutionary",
-                "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
-                "version": 1,
-                "visState": "{\"title\":\"mozillaclub_events_evolutionary\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"mode\":\"stacked\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"times\":[],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Meetings\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "mozillaclub",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "mozillaclub_events_evolutionary",
+                    "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"mozillaclub_events_evolutionary\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"mode\":\"stacked\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"times\":[],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"# Meetings\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "mozillaclub_representatives_countries",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"mozillaclub\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "mozillaclub_representatives_countries",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"New Visualization\",\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"Representatives\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"Country\",\"customLabel\":\"Countries\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "mozillaclub",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "mozillaclub_representatives_countries",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"New Visualization\",\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"Representatives\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"grimoire_creation_date\",\"interval\":\"auto\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"Country\",\"customLabel\":\"Countries\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "mozillaclub_clubs",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"mozillaclub\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "mozillaclub_clubs",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"mozillaclub_clubs\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"6\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Meetings\"}},{\"id\":\"4\",\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"Attendance\",\"percents\":[50],\"customLabel\":\"Median Attendance\"}},{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"grimoire_creation_date\",\"customLabel\":\"Creation Date\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Club_Name\",\"size\":30,\"order\":\"desc\",\"orderBy\":\"4.50\",\"customLabel\":\"Club Name\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"4.50\",\"customLabel\":\"Representative\"}},{\"id\":\"5\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Country\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"4.50\",\"customLabel\":\"Country\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "mozillaclub",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "mozillaclub_clubs",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"mozillaclub_clubs\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"6\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Meetings\"}},{\"id\":\"4\",\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"Attendance\",\"percents\":[50],\"customLabel\":\"Median Attendance\"}},{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"grimoire_creation_date\",\"customLabel\":\"Creation Date\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Club_Name\",\"size\":30,\"order\":\"desc\",\"orderBy\":\"4.50\",\"customLabel\":\"Club Name\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"4.50\",\"customLabel\":\"Representative\"}},{\"id\":\"5\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Country\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"4.50\",\"customLabel\":\"Country\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "mozillaclub_countries",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"mozillaclub\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "mozillaclub_countries",
-                "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-                "version": 1,
-                "visState": "{\"title\":\"mozillaclub_countries\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Meetings\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Country\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Country\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"Attendance\",\"percents\":[50],\"customLabel\":\"Attendance\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "mozillaclub",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "mozillaclub_countries",
+                    "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"mozillaclub_countries\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Meetings\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Country\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Country\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"Attendance\",\"percents\":[50],\"customLabel\":\"Attendance\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "mozillaclub_last_events",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"mozillaclub\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "mozillaclub_last_events",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"mozillaclub_last_events\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"7\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"Attendance\",\"customLabel\":\"Attendance\"}},{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"grimoire_creation_date\",\"customLabel\":\"Creation Date\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Event_Description\",\"size\":30,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Description\"}},{\"id\":\"4\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Representative\"}},{\"id\":\"6\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Club_Name\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Club Name\"}},{\"id\":\"5\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"City\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"City\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Country\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Country\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "mozillaclub",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "mozillaclub_last_events",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"mozillaclub_last_events\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"7\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"Attendance\",\"customLabel\":\"Attendance\"}},{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"grimoire_creation_date\",\"customLabel\":\"Creation Date\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Event_Description\",\"size\":30,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Description\"}},{\"id\":\"4\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Representative\"}},{\"id\":\"6\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Club_Name\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Club Name\"}},{\"id\":\"5\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"City\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"City\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Country\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Country\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "mozillaclub_representatives_summary",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"mozillaclub\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "mozillaclub_representatives_summary",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"New Visualization\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Meetings\"}},{\"id\":\"2\",\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"Attendance\",\"percents\":[50],\"customLabel\":\"Median Attendance\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":30,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Representative\"}},{\"id\":\"4\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"City\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"City\"}},{\"id\":\"5\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Country\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Country\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "mozillaclub",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "mozillaclub_representatives_summary",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"New Visualization\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Meetings\"}},{\"id\":\"2\",\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"Attendance\",\"percents\":[50],\"customLabel\":\"Median Attendance\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":30,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Representative\"}},{\"id\":\"4\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"City\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"City\"}},{\"id\":\"5\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Country\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Country\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "mozillaclub_events_countries",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"mozillaclub\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "mozillaclub_events_countries",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"mozillaclub_events_countries\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":true,\"legendPosition\":\"right\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Meetings\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Country\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Country\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "mozillaclub",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "mozillaclub_events_countries",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"mozillaclub_events_countries\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":true,\"legendPosition\":\"right\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Meetings\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Country\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Country\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "mozillaclub_organizations_authors",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"mozillaclub\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
-                },
-                "title": "mozillaclub_organizations_authors",
-                "uiStateJSON": "{}",
-                "version": 1,
-                "visState": "{\"title\":\"mozillaclub_organizations_authors\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":true,\"legendPosition\":\"right\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Meetings\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"author_org_name\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Country\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "mozillaclub",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "mozillaclub_organizations_authors",
+                    "uiStateJSON": "{}",
+                    "version": 1,
+                    "visState": "{\"title\":\"mozillaclub_organizations_authors\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":true,\"legendPosition\":\"right\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Meetings\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"author_org_name\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Country\"}}],\"listeners\":{}}"
+                }
             }
         },
         {
             "id": "mozillaclub_organizations",
             "value": {
-                "description": "",
-                "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\":\"mozillaclub\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-                },
-                "title": "mozillaclub_organizations",
-                "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-                "version": 1,
-                "visState": "{\"title\":\"mozillaclub_organizations\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Meetings\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_org_name\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Organization\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"Attendance\",\"percents\":[50],\"customLabel\":\"Attendance\"}}],\"listeners\":{}}"
+                "references": [
+                    {
+                        "id": "mozillaclub",
+                        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                        "type": "index-pattern"
+                    }
+                ],
+                "visualization": {
+                    "description": "",
+                    "kibanaSavedObjectMeta": {
+                        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                    },
+                    "title": "mozillaclub_organizations",
+                    "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+                    "version": 1,
+                    "visState": "{\"title\":\"mozillaclub_organizations\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Meetings\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_org_name\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Organization\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"median\",\"schema\":\"metric\",\"params\":{\"field\":\"Attendance\",\"percents\":[50],\"customLabel\":\"Attendance\"}}],\"listeners\":{}}"
+                }
             }
         }
     ]
