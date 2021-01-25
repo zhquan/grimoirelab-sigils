@@ -9,7 +9,7 @@
                     "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"highlightAll\":true,\"version\":true,\"filter\":[{\"meta\":{\"negate\":true,\"disabled\":false,\"alias\":\"Bots\",\"type\":\"phrase\",\"key\":\"author_bot\",\"params\":{\"query\":true},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"author_bot\":{\"query\":true,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
                 },
                 "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
-                "panelsJSON": "[{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":14,\"i\":\"1\"},\"panelIndex\":\"1\",\"embeddableConfig\":{\"title\":\"Posts Created\"},\"title\":\"Posts Created\",\"panelRefName\":\"panel_0\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":14,\"w\":48,\"h\":20,\"i\":\"2\"},\"panelIndex\":\"2\",\"embeddableConfig\":{\"title\":\"Posts (Questions and Answers): Top 30 Contributors\"},\"title\":\"Posts (Questions and Answers): Top 30 Contributors\",\"panelRefName\":\"panel_1\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":34,\"w\":48,\"h\":11,\"i\":\"3\"},\"panelIndex\":\"3\",\"embeddableConfig\":{\"title\":\"Discourse Activity, Active Authors, and Posts\"},\"title\":\"Discourse Activity, Active Authors, and Posts\",\"panelRefName\":\"panel_2\"}]",
+                "panelsJSON": "[{\"version\": \"7.9.1\", \"gridData\": {\"x\": 0, \"y\": 0, \"w\": 48, \"h\": 14, \"i\": \"1\"}, \"panelIndex\": \"1\", \"embeddableConfig\": {\"title\": \"Posts Created\"}, \"title\": \"Posts Created\", \"panelRefName\": \"panel_0\"}, {\"version\": \"7.9.1\", \"gridData\": {\"x\": 0, \"y\": 14, \"w\": 48, \"h\": 20, \"i\": \"2\"}, \"panelIndex\": \"2\", \"embeddableConfig\": {\"title\": \"Posts (Questions and Answers): Top 30 Contributors\"}, \"title\": \"Posts (Questions and Answers): Top 30 Contributors\", \"panelRefName\": \"panel_1\"}, {\"version\": \"7.9.1\", \"gridData\": {\"x\": 0, \"y\": 34, \"w\": 48, \"h\": 11, \"i\": \"3\"}, \"panelIndex\": \"3\", \"embeddableConfig\": {\"title\": \"Discourse Activity, Active Authors, and Posts\"}, \"title\": \"Discourse Activity, Active Authors, and Posts\", \"panelRefName\": \"panel_2\"}]",
                 "timeRestore": false,
                 "title": "Discourse DevRel",
                 "version": 1
@@ -36,7 +36,7 @@
                     "type": "visualization"
                 }
             ],
-            "release_date": "2020-11-26T17:31:31.723353"
+            "release_date": "2021-01-22T16:01:04.946846"
         }
     },
     "searches": [],
@@ -53,7 +53,7 @@
                     "title": "devrel_discourse_posts_rolling_average",
                     "uiStateJSON": "{}",
                     "version": 1,
-                    "visState": "{\"title\":\"devrel_discourse_posts_rolling_average\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=discourse, timefield=grimoire_creation_date).label('Posts / day (Questions and Answers)'),\\n\\n.es(index=discourse, timefield=grimoire_creation_date).mvavg(window='30d').label('Posts: 30d Rolling Avg.'),\\n\\n.es(index=discourse, timefield=grimoire_creation_date).mvavg(window='60d').label('Posts: 60d Rolling Avg.'),\\n\\n.es(index=discourse, timefield=grimoire_creation_date).mvavg(window='90d').label('Posts: 90d Rolling Avg.')\",\"interval\":\"1d\"},\"aggs\":[]}"
+                    "visState": "{\"title\":\"devrel_discourse_posts_rolling_average\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=discourse, timefield=grimoire_creation_date).label(\\\"Posts / day (Questions and Answers)\\\"),\\n\\n.es(index=discourse, timefield=grimoire_creation_date).mvavg(window=\\\"30d\\\").label(\\\"Posts: 30d Rolling Avg.\\\"),\\n\\n.es(index=discourse, timefield=grimoire_creation_date).mvavg(window=\\\"60d\\\").label(\\\"Posts: 60d Rolling Avg.\\\"),\\n\\n.es(index=discourse, timefield=grimoire_creation_date).mvavg(window=\\\"90d\\\").label(\\\"Posts: 90d Rolling Avg.\\\")\",\"interval\":\"1d\"},\"aggs\":[]}"
                 }
             }
         },

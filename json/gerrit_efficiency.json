@@ -9,7 +9,7 @@
                     "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"highlightAll\":true,\"version\":true,\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":\"Changesets Only\",\"disabled\":false,\"key\":\"type\",\"negate\":false,\"params\":{\"query\":\"changeset\"},\"type\":\"phrase\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"type\":{\"query\":\"changeset\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":\"Bots\",\"disabled\":false,\"key\":\"author_bot\",\"negate\":true,\"params\":{\"query\":true},\"type\":\"phrase\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index\"},\"query\":{\"match\":{\"author_bot\":{\"query\":true,\"type\":\"phrase\"}}}}]}"
                 },
                 "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
-                "panelsJSON": "[{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":12,\"w\":13,\"h\":12,\"i\":\"1\"},\"panelIndex\":\"1\",\"embeddableConfig\":{\"title\":\"Time to Merge\"},\"title\":\"Time to Merge\",\"panelRefName\":\"panel_0\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":13,\"y\":12,\"w\":19,\"h\":12,\"i\":\"2\"},\"panelIndex\":\"2\",\"embeddableConfig\":{\"title\":\"Lead Time\"},\"title\":\"Lead Time\",\"panelRefName\":\"panel_1\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":13,\"y\":0,\"w\":19,\"h\":12,\"i\":\"3\"},\"panelIndex\":\"3\",\"embeddableConfig\":{\"title\":\"Review Efficiency Index\"},\"title\":\"Review Efficiency Index\",\"panelRefName\":\"panel_2\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":32,\"y\":0,\"w\":16,\"h\":24,\"i\":\"4\"},\"panelIndex\":\"4\",\"embeddableConfig\":{\"title\":\"Repositories\"},\"title\":\"Repositories\",\"panelRefName\":\"panel_3\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":13,\"h\":12,\"i\":\"5\"},\"panelIndex\":\"5\",\"embeddableConfig\":{\"title\":\"Efficiency Closing Gerrit Changesets\"},\"title\":\"Efficiency Closing Gerrit Changesets\",\"panelRefName\":\"panel_4\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":24,\"w\":48,\"h\":6,\"i\":\"6\"},\"panelIndex\":\"6\",\"embeddableConfig\":{\"title\":\"Efficiency Closing Gerrit Changesets\"},\"title\":\"Efficiency Closing Gerrit Changesets\",\"panelRefName\":\"panel_5\"}]",
+                "panelsJSON": "[{\"version\": \"7.9.1\", \"gridData\": {\"x\": 0, \"y\": 12, \"w\": 13, \"h\": 12, \"i\": \"1\"}, \"panelIndex\": \"1\", \"embeddableConfig\": {\"title\": \"Time to Merge\"}, \"title\": \"Time to Merge\", \"panelRefName\": \"panel_0\"}, {\"version\": \"7.9.1\", \"gridData\": {\"x\": 13, \"y\": 12, \"w\": 19, \"h\": 12, \"i\": \"2\"}, \"panelIndex\": \"2\", \"embeddableConfig\": {\"title\": \"Lead Time\"}, \"title\": \"Lead Time\", \"panelRefName\": \"panel_1\"}, {\"version\": \"7.9.1\", \"gridData\": {\"x\": 13, \"y\": 0, \"w\": 19, \"h\": 12, \"i\": \"3\"}, \"panelIndex\": \"3\", \"embeddableConfig\": {\"title\": \"Review Efficiency Index\"}, \"title\": \"Review Efficiency Index\", \"panelRefName\": \"panel_2\"}, {\"version\": \"7.9.1\", \"gridData\": {\"x\": 32, \"y\": 0, \"w\": 16, \"h\": 24, \"i\": \"4\"}, \"panelIndex\": \"4\", \"embeddableConfig\": {\"title\": \"Repositories\"}, \"title\": \"Repositories\", \"panelRefName\": \"panel_3\"}, {\"version\": \"7.9.1\", \"gridData\": {\"x\": 0, \"y\": 0, \"w\": 13, \"h\": 12, \"i\": \"5\"}, \"panelIndex\": \"5\", \"embeddableConfig\": {\"title\": \"Efficiency Closing Gerrit Changesets\"}, \"title\": \"Efficiency Closing Gerrit Changesets\", \"panelRefName\": \"panel_4\"}, {\"version\": \"7.9.1\", \"gridData\": {\"x\": 0, \"y\": 24, \"w\": 48, \"h\": 6, \"i\": \"6\"}, \"panelIndex\": \"6\", \"embeddableConfig\": {\"title\": \"Efficiency Closing Gerrit Changesets\"}, \"title\": \"Efficiency Closing Gerrit Changesets\", \"panelRefName\": \"panel_5\"}]",
                 "timeRestore": false,
                 "title": "Gerrit Efficiency",
                 "version": 1
@@ -56,7 +56,7 @@
                     "type": "visualization"
                 }
             ],
-            "release_date": "2020-11-27T16:34:42.151954"
+            "release_date": "2021-01-22T16:12:53.905944"
         }
     },
     "searches": [],
@@ -100,7 +100,7 @@
                     "title": "gerrit_lead_time",
                     "uiStateJSON": "{}",
                     "version": 1,
-                    "visState": "{\"title\":\"gerrit_lead_time\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=gerrit, q='status:MERGED OR ABANDONED', timefield=closed, metric=avg:painless_delay).label('Avg. Lead Time (days)'), \\n\\n.es(index=gerrit , q='status:MERGED OR ABANDONED', timefield=closed, metric=avg:painless_delay).trend().label('Avg. Lead Time trend')\",\"interval\":\"1w\"},\"aggs\":[]}"
+                    "visState": "{\"title\":\"gerrit_lead_time\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=gerrit, q=\\\"status:MERGED OR ABANDONED\\\", timefield=closed, metric=avg:painless_delay).label(\\\"Avg. Lead Time (days)\\\"), \\n\\n.es(index=gerrit , q=\\\"status:MERGED OR ABANDONED\\\", timefield=closed, metric=avg:painless_delay).trend().label(\\\"Avg. Lead Time trend\\\")\",\"interval\":\"1w\"},\"aggs\":[]}"
                 }
             }
         },
@@ -116,7 +116,7 @@
                     "title": "gerrit_rei",
                     "uiStateJSON": "{}",
                     "version": 1,
-                    "visState": "{\"title\":\"gerrit_rei\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=gerrit, timefield=closed).divide(.es(index=gerrit, timefield=grimoire_creation_date)).label('REI').color(#99af5d),\\n \\n.es(index=gerrit, timefield=closed).divide(.es(index=gerrit, timefield=grimoire_creation_date)).movingaverage(8w, 'left').label('REI Moving Avg. (8 weeks)').color(#c83d32),\\n\\n.es(index=gerrit, timefield=closed).divide(.es(index=gerrit, timefield=grimoire_creation_date)).trend().label('REI trend'),\\n\\n.es(index=gerrit, timefield=closed).divide(.es(index=gerrit, timefield=grimoire_creation_date)).aggregate(avg).label('Avg. REI').color(#e6b740)\",\"interval\":\"1w\"},\"aggs\":[]}"
+                    "visState": "{\"title\":\"gerrit_rei\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=gerrit, timefield=closed).divide(.es(index=gerrit, timefield=grimoire_creation_date)).label(\\\"REI\\\").color(#99af5d),\\n \\n.es(index=gerrit, timefield=closed).divide(.es(index=gerrit, timefield=grimoire_creation_date)).movingaverage(8w, \\\"left\\\").label(\\\"REI Moving Avg. (8 weeks)\\\").color(#c83d32),\\n\\n.es(index=gerrit, timefield=closed).divide(.es(index=gerrit, timefield=grimoire_creation_date)).trend().label(\\\"REI trend\\\"),\\n\\n.es(index=gerrit, timefield=closed).divide(.es(index=gerrit, timefield=grimoire_creation_date)).aggregate(avg).label(\\\"Avg. REI\\\").color(#e6b740)\",\"interval\":\"1w\"},\"aggs\":[]}"
                 }
             }
         },

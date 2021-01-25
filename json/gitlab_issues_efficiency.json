@@ -9,7 +9,7 @@
                     "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"highlightAll\":true,\"version\":true,\"filter\":[{\"meta\":{\"negate\":true,\"disabled\":false,\"alias\":\"Bots\",\"type\":\"phrase\",\"key\":\"author_bot\",\"params\":{\"query\":true},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"author_bot\":{\"query\":true,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
                 },
                 "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
-                "panelsJSON": "[{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":12,\"i\":\"1\"},\"panelIndex\":\"1\",\"embeddableConfig\":{\"title\":\"Efficiency Closing GitLab Issues\"},\"title\":\"Efficiency Closing GitLab Issues\",\"panelRefName\":\"panel_0\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":24,\"w\":48,\"h\":6,\"i\":\"2\"},\"panelIndex\":\"2\",\"embeddableConfig\":{\"title\":\"Efficiency Closing GitLab Issues\"},\"title\":\"Efficiency Closing GitLab Issues\",\"panelRefName\":\"panel_1\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":0,\"y\":12,\"w\":12,\"h\":12,\"i\":\"3\"},\"panelIndex\":\"3\",\"embeddableConfig\":{\"title\":\"Time to Close\"},\"title\":\"Time to Close\",\"panelRefName\":\"panel_2\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":32,\"y\":0,\"w\":16,\"h\":24,\"i\":\"4\"},\"panelIndex\":\"4\",\"embeddableConfig\":{\"title\":\"Repositories\"},\"title\":\"Repositories\",\"panelRefName\":\"panel_3\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":12,\"y\":0,\"w\":20,\"h\":12,\"i\":\"5\"},\"panelIndex\":\"5\",\"embeddableConfig\":{\"title\":\"BMI\"},\"title\":\"BMI\",\"panelRefName\":\"panel_4\"},{\"version\":\"7.9.1\",\"gridData\":{\"x\":12,\"y\":12,\"w\":20,\"h\":12,\"i\":\"6\"},\"panelIndex\":\"6\",\"embeddableConfig\":{\"title\":\"Lead Time\"},\"title\":\"Lead Time\",\"panelRefName\":\"panel_5\"}]",
+                "panelsJSON": "[{\"version\": \"7.9.1\", \"gridData\": {\"x\": 0, \"y\": 0, \"w\": 12, \"h\": 12, \"i\": \"1\"}, \"panelIndex\": \"1\", \"embeddableConfig\": {\"title\": \"Efficiency Closing GitLab Issues\"}, \"title\": \"Efficiency Closing GitLab Issues\", \"panelRefName\": \"panel_0\"}, {\"version\": \"7.9.1\", \"gridData\": {\"x\": 0, \"y\": 24, \"w\": 48, \"h\": 6, \"i\": \"2\"}, \"panelIndex\": \"2\", \"embeddableConfig\": {\"title\": \"Efficiency Closing GitLab Issues\"}, \"title\": \"Efficiency Closing GitLab Issues\", \"panelRefName\": \"panel_1\"}, {\"version\": \"7.9.1\", \"gridData\": {\"x\": 0, \"y\": 12, \"w\": 12, \"h\": 12, \"i\": \"3\"}, \"panelIndex\": \"3\", \"embeddableConfig\": {\"title\": \"Time to Close\"}, \"title\": \"Time to Close\", \"panelRefName\": \"panel_2\"}, {\"version\": \"7.9.1\", \"gridData\": {\"x\": 32, \"y\": 0, \"w\": 16, \"h\": 24, \"i\": \"4\"}, \"panelIndex\": \"4\", \"embeddableConfig\": {\"title\": \"Repositories\"}, \"title\": \"Repositories\", \"panelRefName\": \"panel_3\"}, {\"version\": \"7.9.1\", \"gridData\": {\"x\": 12, \"y\": 0, \"w\": 20, \"h\": 12, \"i\": \"5\"}, \"panelIndex\": \"5\", \"embeddableConfig\": {\"title\": \"BMI\"}, \"title\": \"BMI\", \"panelRefName\": \"panel_4\"}, {\"version\": \"7.9.1\", \"gridData\": {\"x\": 12, \"y\": 12, \"w\": 20, \"h\": 12, \"i\": \"6\"}, \"panelIndex\": \"6\", \"embeddableConfig\": {\"title\": \"Lead Time\"}, \"title\": \"Lead Time\", \"panelRefName\": \"panel_5\"}]",
                 "timeRestore": false,
                 "title": "GitLab Issues Efficiency",
                 "version": 1
@@ -51,7 +51,7 @@
                     "type": "visualization"
                 }
             ],
-            "release_date": "2020-11-30T17:49:11.409828"
+            "release_date": "2021-01-22T16:50:44.682554"
         }
     },
     "searches": [],
@@ -155,7 +155,7 @@
                     "title": "gitlab_issues_bmi",
                     "uiStateJSON": "{}",
                     "version": 1,
-                    "visState": "{\"title\":\"gitlab_issues_bmi\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=gitlab_issues, timefield=closed_at).divide(.es(index=gitlab_issues, timefield=grimoire_creation_date)).label('BMI').color(#99af5d),\\n .es(index=gitlab_issues, timefield=closed_at).divide(.es(index=gitlab_issues, timefield=grimoire_creation_date)).movingaverage(8w, 'left').label('BMI Moving Avg. (8 weeks)').color(#c83d32),\\n .es(index=gitlab_issues, timefield=closed_at).divide(.es(index=gitlab_issues, timefield=grimoire_creation_date)).trend().label('BMI trend'),\\n.es(index=gitlab_issues, timefield=closed_at).divide(.es(index=gitlab_issues, timefield=grimoire_creation_date)).aggregate(avg).label('Avg. BMI').color(\\t#e6b740)\",\"interval\":\"1w\"},\"aggs\":[]}"
+                    "visState": "{\"title\":\"gitlab_issues_bmi\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=gitlab_issues, timefield=closed_at).divide(.es(index=gitlab_issues, timefield=grimoire_creation_date)).label(\\\"BMI\\\").color(#99af5d),\\n .es(index=gitlab_issues, timefield=closed_at).divide(.es(index=gitlab_issues, timefield=grimoire_creation_date)).movingaverage(8w, \\\"left\\\").label(\\\"BMI Moving Avg. (8 weeks)\\\").color(#c83d32),\\n .es(index=gitlab_issues, timefield=closed_at).divide(.es(index=gitlab_issues, timefield=grimoire_creation_date)).trend().label(\\\"BMI trend\\\"),\\n.es(index=gitlab_issues, timefield=closed_at).divide(.es(index=gitlab_issues, timefield=grimoire_creation_date)).aggregate(avg).label(\\\"Avg. BMI\\\").color(\\t#e6b740)\",\"interval\":\"1w\"},\"aggs\":[]}"
                 }
             }
         },
@@ -171,7 +171,7 @@
                     "title": "gitlab_issues_lead_time",
                     "uiStateJSON": "{}",
                     "version": 1,
-                    "visState": "{\"title\":\"gitlab_issues_lead_time\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=gitlab_issues, q='state:closed', timefield=closed_at, metric=avg:time_to_close_days).label('Avg. Lead Time (days)').color(#99af5d), \\n\\n.es(index=gitlab_issues, q='state:closed', timefield=closed_at, metric=avg:time_to_close_days).trend().label('Avg. Lead Time trend').color(#c83d32)\",\"interval\":\"1w\"},\"aggs\":[]}"
+                    "visState": "{\"title\":\"gitlab_issues_lead_time\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=gitlab_issues, q=\\\"state:closed\\\", timefield=closed_at, metric=avg:time_to_close_days).label(\\\"Avg. Lead Time (days)\\\").color(#99af5d), \\n\\n.es(index=gitlab_issues, q=\\\"state:closed\\\", timefield=closed_at, metric=avg:time_to_close_days).trend().label(\\\"Avg. Lead Time trend\\\").color(#c83d32)\",\"interval\":\"1w\"},\"aggs\":[]}"
                 }
             }
         }
